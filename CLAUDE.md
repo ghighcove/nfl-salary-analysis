@@ -32,4 +32,5 @@ When writing or updating the Medium article (`article/medium_draft.md` + `articl
 - Lead sections with conclusions (BLUF), then support with narrative
 - Define acronyms on first use (PFR, EPA, etc.)
 - Link data sources inline, not just in a footer
+- Use the SEO meta description output (≤200 chars) for Medium/CMS description field
 - After edits, commit and push to update the GitHub Pages URL that Medium reads from
