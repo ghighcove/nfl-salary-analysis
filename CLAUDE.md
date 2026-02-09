@@ -22,3 +22,14 @@ All data from `nfl_data_py` library. Cached as parquet in `data/`.
 1. `pip install -r requirements.txt`
 2. Run notebooks in order: 01 → 02 → 03 → 04
 3. Each notebook saves outputs that the next one reads
+
+## Article Optimization (GEO)
+When writing or updating the Medium article (`article/medium_draft.md` + `article/medium_ready.html`):
+- Run the `seo-for-llms` skill before publishing to audit LLM discoverability
+- Both files must be edited in sync — markdown source and HTML are maintained independently
+- Use descriptive H2 headings (topic + key finding), not clever/vague labels
+- Include a "Key Findings" summary block near the top for RAG retrieval
+- Lead sections with conclusions (BLUF), then support with narrative
+- Define acronyms on first use (PFR, EPA, etc.)
+- Link data sources inline, not just in a footer
+- After edits, commit and push to update the GitHub Pages URL that Medium reads from

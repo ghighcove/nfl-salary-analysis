@@ -33,7 +33,9 @@
 
 <hr>
 
-<h2>The Tale of Two Bosas</h2>
+<h2>The NFL's Biggest Bargain and Worst Contract Lived in One Family</h2>
+
+<p>An analysis of 9,041 NFL player-seasons from 2015 to 2024 reveals that rookie contracts provide a structural salary cap advantage of 1.09 value-score points over veteran deals &mdash; and the teams exploiting this, like Kansas City, are the ones winning Super Bowls.</p>
 
 <p>In 2022, two brothers played on opposite sides of California &mdash; and opposite sides of the salary ledger.</p>
 
@@ -50,16 +52,24 @@
   <figcaption>Performance vs. Salary by Position Group</figcaption>
 </figure>
 
+<p><strong>Key Findings from 9,041 Player-Seasons (2015-2024):</strong></p>
+<ul>
+  <li>Rookie-contract players average a value score of +0.25; veterans average -0.84 &mdash; a structural advantage that drives team-building strategy</li>
+  <li>Nick Bosa's 2022 season (+4.31) was the single best bargain in the NFL; brother Joey's (-6.36) was the worst &mdash; a 10.67-point swing within one family</li>
+  <li>The Kansas City Chiefs led all teams in average value score (+0.28) from 2022-2024, the same period they won two Super Bowls</li>
+  <li>No QB earning 20%+ of the salary cap can generate positive value &mdash; even Mahomes is mathematically &ldquo;overpaid&rdquo; despite elite performance</li>
+</ul>
+
 <hr>
 
-<h2>How We Measured It</h2>
+<h2>How We Measured Player Value: Z-Scores Across 9,041 Player-Seasons</h2>
 
-<p>We pulled every meaningful player-season from 2015 to 2024 using the <code>nfl_data_py</code> library &mdash; weekly stats, PFR defensive data, snap counts, and Over The Cap contract information. After filtering for players with at least 100 snaps in a season (to eliminate players who barely saw the field), we ended up with 9,041 player-seasons across 3,220 unique players.</p>
+<p>We pulled every meaningful player-season from 2015 to 2024 using the <a href="https://github.com/nflverse/nfl_data_py"><code>nfl_data_py</code></a> library &mdash; weekly stats, <a href="https://www.pro-football-reference.com/">Pro Football Reference (PFR)</a> defensive data, snap counts, and <a href="https://overthecap.com/">Over The Cap</a> contract information. After filtering for players with at least 100 snaps in a season (to eliminate players who barely saw the field), we ended up with 9,041 player-seasons across 3,220 unique players.</p>
 
 <p>For each player-season, we calculated two z-scores within their position group:</p>
 
 <ul>
-  <li><strong>Performance z-score:</strong> A composite of position-relevant statistics normalized against their peers. Quarterbacks are measured on passer rating, EPA, and efficiency metrics. Wide receivers on catch rate, yards per reception, and receiving EPA. Defensive linemen on sacks, pressures, and QB hits. Every position group gets its own formula.</li>
+  <li><strong>Performance z-score:</strong> A composite of position-relevant statistics normalized against their peers. Quarterbacks are measured on passer rating, EPA, and efficiency metrics. Wide receivers on catch rate, yards per reception, and receiving EPA (Expected Points Added). Defensive linemen on sacks, pressures, and QB hits. Every position group gets its own formula.</li>
   <li><strong>Salary z-score:</strong> Where the player's average annual salary (as a percentage of the salary cap) sits relative to others at the same position.</li>
 </ul>
 
@@ -69,7 +79,7 @@
 
 <hr>
 
-<h2>The Price of Each Position</h2>
+<h2>NFL Salary Structure: QBs Take 20%+ of the Cap, RBs Barely Register</h2>
 
 <p>Before diving into individual players, it helps to understand the salary landscape. Quarterbacks exist in their own economic universe &mdash; the highest-paid QBs consume over 20% of the salary cap, a number no other position comes close to reaching. Wide receivers and defensive linemen form the next tier, with top contracts reaching 10&ndash;12% of the cap.</p>
 
@@ -84,7 +94,7 @@
 
 <hr>
 
-<h2>The Best Deals in Football</h2>
+<h2>Top NFL Bargains: Rookie Contracts Dominate the Value Leaderboard</h2>
 
 <p>The top bargains list reads like a scouting department's dream journal. At the very top sits Nick Bosa's 2022 season &mdash; the one we already covered. But the rest of the list is just as telling.</p>
 
@@ -101,7 +111,7 @@
 
 <hr>
 
-<h2>The Most Overpaid Players</h2>
+<h2>Most Overpaid NFL Players (2015-2024): Injuries Drive the Bust List</h2>
 
 <p>The overpaid list tells a different story &mdash; mostly one of injuries and decline.</p>
 
@@ -118,7 +128,7 @@
 
 <hr>
 
-<h2>The Rookie Contract Goldmine</h2>
+<h2>Rookie Contracts Average +0.25 Value vs. -0.84 for Veterans</h2>
 
 <p>The single most predictable finding in this analysis is also the most important one: rookie contracts are the most reliable source of surplus value in the NFL.</p>
 
@@ -137,7 +147,7 @@
 
 <hr>
 
-<h2>The Mahomes Paradox</h2>
+<h2>The Mahomes Paradox: Why the Best QB Is Mathematically &ldquo;Overpaid&rdquo;</h2>
 
 <p>Patrick Mahomes is the best quarterback of his generation. He's also, by our value metric, consistently "overpaid" since signing his record-breaking extension.</p>
 
@@ -154,7 +164,7 @@
 
 <hr>
 
-<h2>Which Teams Get It Right?</h2>
+<h2>Best Value NFL Teams 2022-2024: Chiefs and Lions Lead the League</h2>
 
 <p>When we aggregate value scores by team over the 2022&ndash;2024 window, the leaderboard aligns surprisingly well with on-field success.</p>
 
@@ -171,7 +181,7 @@
 
 <hr>
 
-<h2>What This Means</h2>
+<h2>Three Takeaways from 9,041 NFL Player-Seasons</h2>
 
 <p>Three takeaways from 9,041 player-seasons:</p>
 
@@ -187,7 +197,7 @@
 
 <hr>
 
-<p><em>Data sourced from nfl_data_py (weekly stats, PFR, snap counts) and Over The Cap (contract data). Full analysis code available at <a href="https://github.com/ghighcove/nfl-salary-analysis">github.com/ghighcove/nfl-salary-analysis</a>.</em></p>
+<p><em>Data sourced from <a href="https://github.com/nflverse/nfl_data_py">nfl_data_py</a> (weekly stats, <a href="https://www.pro-football-reference.com/">PFR</a>, snap counts) and <a href="https://overthecap.com/">Over The Cap</a> (contract data). Full analysis code available at <a href="https://github.com/ghighcove/nfl-salary-analysis">github.com/ghighcove/nfl-salary-analysis</a>.</em></p>
 
 </body>
 </html>
