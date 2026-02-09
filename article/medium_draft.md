@@ -18,7 +18,7 @@ Same last name. Same position group. Same year. A 10.67-point swing in value. Th
 
 This kind of gap isn't an anomaly. It's the story of the modern NFL. The league's salary cap forces every franchise into the same puzzle: find players who outperform their contracts, and avoid the ones who don't. We set out to quantify exactly who's winning that puzzle and who's losing it.
 
-![Performance vs. Salary by Position Group](images/01_scatter_grid.png)
+![Performance vs. Salary by Position Group](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/01_scatter_grid.png)
 
 ---
 
@@ -43,7 +43,7 @@ Before diving into individual players, it helps to understand the salary landsca
 
 Running backs, as the analytics community has long argued, are the most replaceable position. The salary boxplot confirms it: the median RB salary barely registers, and even the most expensive running backs earn less than an average-priced quarterback.
 
-![Salary Distribution by Position Group](images/02_salary_boxplot.png)
+![Salary Distribution by Position Group](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/02_salary_boxplot.png)
 
 This salary structure creates natural dynamics in our value analysis. Positions with compressed salary ranges (like running back) make it harder to be dramatically overpaid. Positions with enormous salary variance (like quarterback) create the widest gaps between bargains and busts.
 
@@ -57,7 +57,7 @@ Justin Madubuike's 2023 season in Baltimore (value score: +3.95) came on a pre-e
 
 The pattern is unmistakable: the vast majority of top bargains are players on rookie contracts — either first-rounders still on their initial deal or mid-round picks who outperformed their draft slot. This isn't surprising, but the magnitude is. The average rookie-contract player has a value score of +0.25. The average veteran-contract player sits at -0.84. That's a full point of value difference, embedded structurally into the league's pay scale.
 
-![Top 15 Bargains — All Positions](images/03_top_bargains.png)
+![Top 15 Bargains — All Positions](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/03_top_bargains.png)
 
 The takeaway for front offices: your best "signings" aren't signings at all. They're draft picks.
 
@@ -71,7 +71,7 @@ Joey Bosa appears twice in the top five (2022 and 2023), a reflection of a massi
 
 Marshon Lattimore also appears twice — his 2022 and 2024 seasons both produced negative value scores exceeding -5.0. Once a shutdown corner, Lattimore's production dipped while his contract remained at the top of the cornerback market.
 
-![Top 15 Overpaid — All Positions](images/04_top_overpaid.png)
+![Top 15 Overpaid — All Positions](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/04_top_overpaid.png)
 
 An important caveat: being "overpaid" in this analysis doesn't mean a player is bad. It means their production, in the seasons measured, didn't match the salary they commanded. T.J. Watt is a future Hall of Famer who had an unfortunate injury year. Aaron Donald appears as "overpaid" in 2023 because he retired mid-season — low stats, high cap hit. Context always matters.
 
@@ -83,7 +83,7 @@ The single most predictable finding in this analysis is also the most important 
 
 The distribution of value scores tells the story clearly. Rookie-contract players cluster to the right of zero, with a median value score of +0.12 and a long right tail of massive bargains. Veteran-contract players cluster to the left, with a median of -0.73 and a left tail of catastrophic overpays.
 
-![Rookie vs. Veteran Contract Value](images/05_rookie_vs_veteran.png)
+![Rookie vs. Veteran Contract Value](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/05_rookie_vs_veteran.png)
 
 This isn't just a marginal effect. Of our 9,041 player-seasons, 7,017 are on rookie deals and 2,024 are on veteran contracts. The rookie pool averages +0.25 in value score. The veteran pool averages -0.84. That gap is enormous.
 
@@ -99,7 +99,7 @@ Patrick Mahomes is the best quarterback of his generation. He's also, by our val
 
 In 2018 and 2019, on his rookie deal, Mahomes posted value scores of +2.27 and +1.86. He was exactly what you hope a first-round quarterback becomes: elite production at a rookie price. Then in 2020, his ten-year, $503 million extension kicked in, pushing his cap percentage to 22.7%. His performance z-scores stayed excellent — ranging from +0.91 to +1.63 — but at that salary tier, even elite play doesn't generate positive value.
 
-![Patrick Mahomes — Value Trajectory](images/06_mahomes_trajectory.png)
+![Patrick Mahomes — Value Trajectory](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/06_mahomes_trajectory.png)
 
 This is the paradox that every franchise quarterback creates. Mahomes makes the Chiefs better in ways that don't show up in a value formula. He sells tickets, attracts free agents, elevates teammates, and wins Super Bowls. But by the pure math of salary-cap-normalized production, no quarterback earning 20%+ of the cap can be a "bargain." The cap hit is simply too large for any statistical output to overcome.
 
@@ -115,7 +115,7 @@ The Kansas City Chiefs (+0.28 average value score) lead the league — the same 
 
 At the bottom, the Cleveland Browns (-0.27) and Los Angeles Chargers (-0.21) stand out — teams that committed major cap dollars to underperforming or injured players.
 
-![Best Value Teams by Position (2022–2024)](images/07_team_heatmap.png)
+![Best Value Teams by Position (2022–2024)](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/07_team_heatmap.png)
 
 The heatmap reveals that winning the value game isn't about one position. Kansas City generates positive value across nearly every position group. Detroit's strength is spread across its defense and skill positions. The teams at the bottom tend to have one or two catastrophic position groups dragging down their overall average — often defensive positions with large guaranteed contracts attached to injured players.
 
