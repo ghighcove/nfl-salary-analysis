@@ -1,0 +1,11 @@
+nfl-data-py>=0.3.3
+fastparquet==0.7.2
+pandas
+numpy
+matplotlib
+seaborn
+plotly>=5.0.0
+kaleido==0.2.1
+jupyter
+ipywidgets
+scikit-learn
