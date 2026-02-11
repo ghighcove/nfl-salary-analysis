@@ -130,15 +130,18 @@ from nfl_analysis import data_loader, cleaning, value_score, viz
 
 ---
 
-## Future Research Options
+## Article Production Pipeline
 
-See `notebooks/RESEARCH_OPTIONS.md` for 10 potential follow-up analyses, including:
-- Contract year performance boost
-- Team salary cap strategy effectiveness
-- Position market inflation
-- Injury impact on salary efficiency
-- Veteran vs. rookie contract decay
-- And more...
+See **`PROJECT_PIPELINE.md`** for the complete article production roadmap:
+
+**20 articles planned across 3 series:**
+- **Position Deep Dives** (10 articles) — RB, QB, WR, TE, DB, LB, DL, OL, K/P, Special Teams
+- **Team Strategy** (8 articles) — Best drafting teams, cap management, draft vs. FA ROI, front office patterns
+- **Contract Market Trends** (2 articles) — Salary inflation, contract year performance
+
+**Next article:** Running Back Economics (extends draft ROI findings)
+**Production target:** 5-10 articles published in 2-3 months
+**Quality standard:** 95+ GEO score for LLM discoverability
 
 ---
 
