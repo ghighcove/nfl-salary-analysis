@@ -43,29 +43,31 @@ When writing or updating the Medium article (`article/medium_draft.md` + `articl
 
 ## Medium Article Publishing
 
-**CRITICAL: Image URL Format for Medium Import**
-- For Medium article publishing: **always use `raw.githubusercontent.com` URLs** for images in the markdown/HTML source files
-- Example: `https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/image.png`
-- **Never use GitHub Pages URLs** (`ghighcove.github.io`) in article source files for Medium import
-- Medium rejects GitHub Pages URLs because they serve with `text/plain` content-type, blocking image imports
-- GitHub Pages URLs are for web viewing only, not Medium import
+**CRITICAL: Use GitHub Pages URLs for Import**
+- Medium **ONLY accepts GitHub Pages URLs** for importing articles
+- Import URL format: `https://ghighcove.github.io/nfl-salary-analysis/article/filename.html`
+- Medium **REJECTS** `raw.githubusercontent.com` URLs (returns "Import failed" error)
+- Images WITHIN the article content can use `raw.githubusercontent.com` URLs and will load correctly
 
 ### Medium Import Methods
 
-**Preferred:** Import markdown files directly
-- URL format: `https://raw.githubusercontent.com/USER/REPO/master/article/filename.md`
-- Medium can parse markdown tables natively
-- Simpler than HTML import
-- Use for articles with data tables
+**Preferred:** Import HTML files via GitHub Pages
+- URL format: `https://ghighcove.github.io/nfl-salary-analysis/article/filename.html`
+- Commit and push changes to GitHub to update the GitHub Pages content
+- Images within the HTML can reference `raw.githubusercontent.com` URLs successfully
+- HTML tables will lose formatting (columns run together) but data is preserved
+- Use image-based tables (table screenshots) for complex data tables
 
-**Alternative:** Import hand-crafted HTML (like original article)
-- Must use `<figure>` tags for images (not `<p><img /></p>`)
-- Avoid HTML tables if possible (Medium's parser has limitations)
-- Add `lang="en"` to `<html>` tag
-- Use serif fonts, avoid self-closing tags
-- Use for articles with complex formatting that requires manual control
+**Image URLs Within Content:**
+- Format: `https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/image.png`
+- These work correctly when the HTML file is imported via GitHub Pages URL
+- Medium loads images from `raw.githubusercontent.com` without issues when referenced in imported content
 
-**Don't:** Import auto-generated HTML from markdown
-- Complex table structures cause parsing failures
-- Self-closing tags and `<p>`-wrapped images may be rejected
-- Medium's HTML parser is stricter than markdown parser
+**Table Handling:**
+- HTML `<table>` elements import with data intact but lose column formatting
+- Options: (1) Reformat tables manually in Medium editor, (2) Use image-based tables, (3) Convert to prose/lists
+- Image-based tables (screenshots of formatted tables) import perfectly
+
+**Don't:** Try to import from `raw.githubusercontent.com`
+- Medium's import tool rejects both markdown and HTML from `raw.githubusercontent.com`
+- Always use GitHub Pages URLs as the import source
