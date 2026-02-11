@@ -29,11 +29,11 @@ In plain English: We compare each player's on-field production (touchdowns, yard
 
 All analysis focuses on **years 1-4 post-draft** — the standard rookie contract window when teams have maximum cost control.
 
-**Data sources:** NFL play-by-play data (2015-2024), OverTheCap salary data, Pro Football Reference advanced stats. Minimum 100 snaps/season threshold.
+**Data sources:** NFL play-by-play data (2015-2024), OverTheCap salary data, Pro Football Reference advanced stats including EPA (Expected Points Added) and APY (Average Per Year) cap percentages. Minimum 100 snaps/season threshold.
 
 ## Finding #1: Round 2 Is the Sweet Spot
 
-Conventional wisdom says Round 1 picks are the safest bets — teams are drafting "can't-miss" prospects with their most valuable capital. The data tells a different story.
+**Round 2 outperforms Round 1 by 42%** — challenging the conventional wisdom that first-round picks are the safest bets.
 
 ### Average Value Score by Draft Round (Rookie Contract Years)
 
@@ -186,9 +186,7 @@ The flip side: Which first-round picks delivered the **worst value** during thei
 | Vita Vea | DL | 12 | **-2.52** |
 | Penei Sewell | OL | 7 | **-2.25** |
 
-**Important context:** These players weren't bad. CMC was All-Pro. Zeke led the league in rushing. Waddle had 1,000+ yards as a rookie.
-
-The problem? **Their salaries were too high** relative to their production. A Round 1 RB earning $7M must produce like an MVP to justify the cost, while a Round 3 RB earning $1M only needs to be "good."
+**Important context:** These players performed well (CMC: All-Pro, Zeke: rushing leader, Waddle: 1,000+ yards), but **their salaries were too high** relative to production. A Round 1 RB earning $7M must produce like an MVP to justify the cost, while a Round 3 RB earning $1M only needs to be "good."
 
 This is the hidden cost of draft position — not just whether a player contributes, but whether they're **worth their slot salary**.
 
