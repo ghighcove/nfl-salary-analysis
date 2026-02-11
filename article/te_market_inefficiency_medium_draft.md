@@ -40,15 +40,7 @@ All analysis focuses on **rookie contract years (years 0-3 post-draft)** when te
 
 ![Bar chart showing average value score by draft round for tight ends during rookie contract years. Round 2 shows highest value at +0.58 in green, Round 5 at +0.53 in green, Round 3 at +0.45 in orange, Round 4 at +0.41 in orange, Round 1 at +0.35 in orange, Round 6 at +0.23 in orange, and Round 7 at +0.10 in orange. A dashed gray line at 0 separates positive from negative value.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/te_market_inefficiency/draft_roi_by_round.png)
 
-| Draft Round | Avg Value Score | Sample Size | Key Insight |
-|-------------|-----------------|-------------|-------------|
-| **Round 2** | **+0.582** | 73 | **Best overall value** |
-| **Round 5** | **+0.530** | 70 | **Elite bargains** |
-| Round 3 | +0.452 | 56 | Solid value |
-| Round 4 | +0.411 | 80 | Consistent production |
-| Round 1 | +0.353 | 37 | High bust risk |
-| Round 6 | +0.231 | 41 | Deep value plays |
-| Round 7 | +0.102 | 51 | Low expectations |
+![Table: Draft ROI by Round showing average value scores for TEs by draft round](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/te_market_inefficiency/table_1_draft_roi.png)
 
 **Why does Round 2 dominate?**
 
@@ -70,15 +62,7 @@ Round 5 TEs earn near-minimum salaries (**~$800k per year**, or 0.4% of cap), so
 
 ![Line chart showing average value score by years since draft for tight ends. Peak occurs at Year 2 with value score of +0.68, followed by Year 1 at +0.66, Year 0 at +0.43, then gradual decline through Year 10. Includes markers showing sample size at each year. Dashed gray line at 0 separates positive from negative value.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/te_market_inefficiency/career_arc.png)
 
-| Years Since Draft | Avg Value Score | Sample Size | Career Phase |
-|-------------------|-----------------|-------------|--------------|
-| **Year 2** | **+0.683** | 122 | **Peak production** |
-| **Year 1** | **+0.664** | 134 | Elite value window |
-| Year 0 | +0.426 | 138 | Development year |
-| Year 3 | +0.335 | 101 | Second contract looms |
-| Year 4 | +0.147 | 79 | Value decline begins |
-| Year 5 | +0.075 | 63 | End of rookie deal |
-| Year 6+ | +0.029 avg | 122 | Veteran phase |
+![Table: TE Career Arc showing value score by years of experience](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/te_market_inefficiency/table_2_career_arc.png)
 
 **Peak performance occurs in Years 1-2** (+0.664 and +0.683 avg value), coinciding exactly with the rookie contract window. But unlike running backs (who go negative by Year 4), tight ends maintain positive value through Year 6 — an extra 2-3 years of surplus production.
 
@@ -101,18 +85,7 @@ While first-round busts make headlines, late-round TE gems consistently deliver 
 
 ![Horizontal bar chart showing top 10 tight end bargains ranked by career average value score. Sam LaPorta leads at +2.46 (Round 2, Pick 34), followed by Tucker Kraft at +1.45 (Round 3, Pick 78), Trey McBride at +1.42 (Round 2, Pick 55), Isaiah Likely at +1.37 (Round 5, Pick 139), Cade Otton at +1.36 (Round 4, Pick 106), and five others. Bars colored by draft round using green gradient.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/te_market_inefficiency/top_bargains.png)
 
-| Player | Draft Round | Pick # | Avg Value Score | Seasons |
-|--------|-------------|--------|-----------------|---------|
-| **Sam LaPorta** | 2 | 34 | **+2.463** | 2 |
-| **Tucker Kraft** | 3 | 78 | **+1.451** | 2 |
-| **Trey McBride** | 2 | 55 | **+1.423** | 3 |
-| **Isaiah Likely** | 5 | 139 | **+1.372** | 2 |
-| **Cade Otton** | 4 | 106 | **+1.361** | 3 |
-| Dalton Kincaid | 2 | 25 | +1.287 | 2 |
-| Cole Kmet | 2 | 43 | +1.179 | 5 |
-| Dawson Knox | 3 | 96 | +1.178 | 6 |
-| Juwan Johnson | 7 | UDFA | +1.129 | 5 |
-| Hunter Henry | 2 | 35 | +1.127 | 5 |
+![Table: Top 10 TE bargains ranked by career average value score](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/te_market_inefficiency/table_3_top_bargains.png)
 
 **Notice the pattern?** **7 of the top 10 came from Rounds 2-3**, and only 1 came from Round 1. The remaining 2 were late-round picks (Round 5 and UDFA).
 
@@ -132,18 +105,7 @@ This is the most sobering finding: **60% of first-round TEs** in our dataset pos
 
 ![Horizontal bar chart showing 10 first-round tight end busts ranked by career average value score (lowest to highest). Eric Ebron at -1.78 (Pick 10), O.J. Howard at -1.48 (Pick 19), Tyler Eifert at -1.04 (Pick 21), and seven others ranging from -0.90 to +0.15. Bars colored by draft pick number using red gradient.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/te_market_inefficiency/top_busts.png)
 
-| Player | Pick # | Avg Value Score | Seasons | Career Accolades |
-|--------|--------|-----------------|---------|------------------|
-| **Eric Ebron** | 10 | **-1.782** | 7 | 1x Pro Bowl (IND) |
-| **O.J. Howard** | 19 | **-1.477** | 6 | 2016 CFP Champion |
-| **Tyler Eifert** | 21 | **-1.044** | 4 | 1x Pro Bowl |
-| **David Njoku** | 29 | **-0.895** | 8 | Still active |
-| **T.J. Hockenson** | 8 | **-0.833** | 6 | 2x Pro Bowl |
-| **Evan Engram** | 23 | **-0.783** | 8 | 1x Pro Bowl |
-| **Kyle Pitts** | 4 | **-0.631** | 4 | 2021 ROY runner-up |
-| **Hayden Hurst** | 25 | **-0.495** | 6 | Still active |
-| **Noah Fant** | 20 | **-0.280** | 6 | Still active |
-| **Dalton Schultz** | WAIT | **+0.153** | SEE NOTE | Round 4 pick (137) |
+![Table: Top 10 first-round TE busts with negative career value scores](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/te_market_inefficiency/table_4_top_busts.png)
 
 **Wait, T.J. Hockenson is a "bust"?!**
 
@@ -187,10 +149,7 @@ Touchdowns are the most valuable stat in football. A TE who converts 15% of targ
 
 ![Bar chart comparing average value score between blocking TEs (orange bar at -0.014) and receiving TEs (green bar at +0.032). Dashed gray line at 0 separates positive from negative value. Sample sizes shown: Blocking TEs n=780, Receiving TEs n=280.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/te_market_inefficiency/blocking_vs_receiving.png)
 
-| TE Type | Avg Value Score | Sample Size | Key Insight |
-|---------|-----------------|-------------|-------------|
-| **Receiving TE** | **+0.032** | 280 | Positive value |
-| **Blocking TE** | **-0.014** | 780 | Negative value |
+![Table: Blocking vs Receiving TEs average value score comparison](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/te_market_inefficiency/table_5_role_comparison.png)
 
 **Receiving TEs average +0.032 value**, while blocking TEs average **-0.014** — a swing of **+0.046** in favor of pass-catching specialists.
 
