@@ -49,4 +49,23 @@ When writing or updating the Medium article (`article/medium_draft.md` + `articl
 - **Never use GitHub Pages URLs** (`ghighcove.github.io`) in article source files for Medium import
 - Medium rejects GitHub Pages URLs because they serve with `text/plain` content-type, blocking image imports
 - GitHub Pages URLs are for web viewing only, not Medium import
-- HTML files must use proper `<table>` elements, not markdown pipe syntax
+
+### Medium Import Methods
+
+**Preferred:** Import markdown files directly
+- URL format: `https://raw.githubusercontent.com/USER/REPO/master/article/filename.md`
+- Medium can parse markdown tables natively
+- Simpler than HTML import
+- Use for articles with data tables
+
+**Alternative:** Import hand-crafted HTML (like original article)
+- Must use `<figure>` tags for images (not `<p><img /></p>`)
+- Avoid HTML tables if possible (Medium's parser has limitations)
+- Add `lang="en"` to `<html>` tag
+- Use serif fonts, avoid self-closing tags
+- Use for articles with complex formatting that requires manual control
+
+**Don't:** Import auto-generated HTML from markdown
+- Complex table structures cause parsing failures
+- Self-closing tags and `<p>`-wrapped images may be rejected
+- Medium's HTML parser is stricter than markdown parser
