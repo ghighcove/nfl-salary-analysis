@@ -18,3 +18,40 @@
 - Value = performance_z - salary_z: positive = bargain, negative = overpaid.
 - Rookie-deal stars (Nick Bosa pre-extension, Sam LaPorta) naturally surface as top bargains.
 - Injured high-salary players (Joey Bosa, Marshon Lattimore) naturally surface as overpaid due to low stats.
+
+## Publishing Workflow (`/publish` skill)
+
+### Medium Import — Errors & Fixes (2026-02-10)
+
+**Error #1: Inefficient navigation**
+- ❌ Navigated to `https://medium.com/new-story` first
+- ❌ Tried clicking "..." menu and searching for "import" feature
+- ❌ Wasted 3 tool calls on wrong page
+- ✅ **Fix:** Go directly to `https://medium.com/p/import` — this is the dedicated import page
+
+**Error #2: Form input method**
+- ❌ Tried using `form_input` tool on URL field (failed - element was a DIV)
+- ✅ **Fix:** Use `computer(action="left_click")` + `computer(action="type")` for Medium's custom input fields
+
+**Error #3: Overcomplicated browser automation**
+- ❌ Should have known Medium's import URL structure from documentation/previous experience
+- ✅ **Fix:** Document common Medium URLs in skill README:
+  - Import page: `https://medium.com/p/import`
+  - New story: `https://medium.com/new-story`
+  - Draft editor: `https://medium.com/p/{draft_id}/edit`
+
+### Workflow Improvements
+
+**What worked well:**
+- ✅ GEO optimization workflow (Phase 1-5) executed perfectly
+- ✅ HTML export with proper Medium-compatible styling
+- ✅ Git commit/push automation with auth refresh fallback
+- ✅ Browser automation eventually succeeded despite navigation inefficiency
+
+**Should update:**
+- Update `medium_automation.py` to use direct import URL: `https://medium.com/p/import`
+- Add URL constants to avoid hardcoding and navigation guesswork
+- Add fallback: if `form_input` fails on Medium fields, auto-retry with click+type pattern
+- Consider adding a "Medium Import Troubleshooting" section to skill README
+
+**Key lesson:** When browser automating known services (Medium, GitHub, etc.), use direct URLs for specific actions rather than navigating through menus. Saves 2-3 tool calls per workflow.

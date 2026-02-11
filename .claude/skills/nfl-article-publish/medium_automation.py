@@ -23,43 +23,31 @@ def import_to_medium(github_pages_url, browser_tools):
 
         tab_id = tabs_context['tabs'][0]['id']
 
-        # Navigate to Medium new story page
+        # Navigate directly to Medium's import page (not new-story)
         browser_tools['navigate'](
-            url="https://medium.com/new-story",
+            url="https://medium.com/p/import",
             tabId=tab_id
         )
         browser_tools['wait'](duration=3)
 
-        # Find and click "Import a story" link
-        import_elements = browser_tools['find'](
-            query="import story link",
-            tabId=tab_id
-        )
-
-        if not import_elements:
-            return False, "Could not find 'Import a story' link on Medium"
-
-        # Click the import link
-        browser_tools['computer'](
-            action="left_click",
-            ref=import_elements[0]['ref'],
-            tabId=tab_id
-        )
-        browser_tools['wait'](duration=2)
-
-        # Find URL input field
+        # Find URL input field on import page
         url_input = browser_tools['find'](
-            query="url input field for import",
+            query="url input field",
             tabId=tab_id
         )
 
         if not url_input:
-            return False, "Could not find URL input field for import"
+            return False, "Could not find URL input field on Medium import page"
 
-        # Enter GitHub Pages URL
-        browser_tools['form_input'](
+        # Click input field and type URL (form_input doesn't work on Medium's custom fields)
+        browser_tools['computer'](
+            action="left_click",
             ref=url_input[0]['ref'],
-            value=github_pages_url,
+            tabId=tab_id
+        )
+        browser_tools['computer'](
+            action="type",
+            text=github_pages_url,
             tabId=tab_id
         )
         browser_tools['wait'](duration=1)
