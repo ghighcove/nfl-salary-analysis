@@ -31,11 +31,11 @@ Analyzing 3,657 NFL player-seasons reveals Round 2 outperforms Round 1 by 42%, R
 - **Markdown:** `draft_roi_medium_draft.md`
 - **Images:** All 4 PNG files in this directory (uploaded to GitHub Pages)
 
-### Image URLs (GitHub Pages - Medium-compatible)
-- `https://ghighcove.github.io/nfl-salary-analysis/article/draft-round-value.png`
-- `https://ghighcove.github.io/nfl-salary-analysis/article/position-round-heatmap.png`
-- `https://ghighcove.github.io/nfl-salary-analysis/article/late-round-steals.png`
-- `https://ghighcove.github.io/nfl-salary-analysis/article/position-strategy-table.png`
+### Image URLs (raw.githubusercontent.com - Medium-compatible)
+- `https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/draft-round-value.png`
+- `https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/position-round-heatmap.png`
+- `https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/late-round-steals.png`
+- `https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/position-strategy-table.png`
 
 ## Publishing Checklist
 
