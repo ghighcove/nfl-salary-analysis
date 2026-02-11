@@ -18,7 +18,21 @@
       "Bash(git --version:*)",
       "Bash(dir:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(if not exist \"G:\\\\ai\\\\nfl\\\\article\\\\images\" mkdir \"G:\\\\ai\\\\nfl\\\\article\\\\images\")",
+      "Bash(python:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(grep:*)",
+      "Bash(pip uninstall:*)",
+      "Bash(test:*)",
+      "Bash(curl:*)",
+      "Bash(git log:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(ls:*)",
+      "Bash(python3:*)"
     ]
   }
 }
