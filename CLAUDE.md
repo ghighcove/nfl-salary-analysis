@@ -40,3 +40,13 @@ When writing or updating the Medium article (`article/medium_draft.md` + `articl
 - Link data sources inline, not just in a footer
 - Use the SEO meta description output (≤200 chars) for Medium/CMS description field
 - After edits, commit and push to update the GitHub Pages URL that Medium reads from
+
+## Medium Article Publishing
+
+**CRITICAL: Image URL Format for Medium Import**
+- For Medium article publishing: **always use `raw.githubusercontent.com` URLs** for images in the markdown/HTML source files
+- Example: `https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/image.png`
+- **Never use GitHub Pages URLs** (`ghighcove.github.io`) in article source files for Medium import
+- Medium rejects GitHub Pages URLs because they serve with `text/plain` content-type, blocking image imports
+- GitHub Pages URLs are for web viewing only, not Medium import
+- HTML files must use proper `<table>` elements, not markdown pipe syntax
