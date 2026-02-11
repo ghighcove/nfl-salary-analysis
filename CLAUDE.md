@@ -29,45 +29,108 @@ All data from `nfl_data_py` library. Cached as parquet in `data/`.
 from nfl_analysis import data_loader, cleaning, value_score, viz
 ```
 
-## Article Optimization (GEO)
-When writing or updating the Medium article (`article/medium_draft.md` + `article/medium_ready.html`):
-- Run the `seo-for-llms` skill before publishing to audit LLM discoverability
-- Both files must be edited in sync — markdown source and HTML are maintained independently
+## Automated Publishing Workflow
+
+### Quick Start
+
+To publish a new NFL analysis article:
+
+```bash
+/publish <article_name>
+```
+
+**Examples:**
+- `/publish draft_roi`
+- `/publish win_probability`
+- `/publish player_value_trends`
+
+The `/publish` skill automates the entire publishing pipeline:
+1. ✅ **GEO Optimization** - Runs `/seo-for-llms` audit for LLM discoverability
+2. ✅ **Metadata Generation** - Creates `MEDIUM_PUBLISH_INFO_{name}.md` with SEO descriptions and tags
+3. ✅ **HTML Export** - Converts markdown to Medium-compatible HTML
+4. ✅ **Git Workflow** - Commits and pushes to GitHub (updates GitHub Pages)
+5. ✅ **URL Output** - Provides GitHub Pages and markdown URLs
+6. ✅ **Medium Import** - Optional browser automation for importing to Medium draft
+7. ✅ **Scheduling** - Optional publication date scheduling
+
+### Article Preparation
+
+Before running `/publish`, ensure:
+
+1. **Create markdown file:** `article/{name}_medium_draft.md`
+2. **Generate visualizations:** Save charts/images to `article/` or `article/images/`
+3. **Use correct image URLs:**
+   ```markdown
+   ![Chart](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/chart.png)
+   ```
+4. **Include attribution:** Between subtitle and `---` separator:
+   ```markdown
+   # Article Title
+   *Subtitle goes here*
+
+   *This article's content and analytical perspective were crafted by Claude Sonnet 4.5. The project genesis and direction came from Glenn Highcove. For more information and feedback, connect with Glenn on [LinkedIn](https://www.linkedin.com/in/glennhighcove/).*
+
+   ---
+
+   [Article content begins...]
+   ```
+
+### Article Optimization Guidelines (GEO)
+
+For LLM discoverability and AI search optimization:
 - Use descriptive H2 headings (topic + key finding), not clever/vague labels
 - Include a "Key Findings" summary block near the top for RAG retrieval
 - Lead sections with conclusions (BLUF), then support with narrative
 - Define acronyms on first use (PFR, EPA, etc.)
 - Link data sources inline, not just in a footer
-- Use the SEO meta description output (≤200 chars) for Medium/CMS description field
-- After edits, commit and push to update the GitHub Pages URL that Medium reads from
+- The `/publish` skill automatically generates SEO meta descriptions (≤200 chars)
 
-## Medium Article Publishing
+### Workflow Output
+
+After running `/publish {name}`, you'll receive:
+
+**Files Created:**
+- `article/{name}_medium_ready.html` - Medium-compatible HTML export
+- `article/MEDIUM_PUBLISH_INFO_{name}.md` - Publishing metadata and checklist
+
+**URLs Provided:**
+- **GitHub Pages** (for Medium import): `https://ghighcove.github.io/nfl-salary-analysis/article/{name}_medium_ready.html`
+- **GitHub Markdown** (browser-friendly): `https://github.com/ghighcove/nfl-salary-analysis/blob/master/article/{name}_medium_draft.md`
+
+**Git Commit:**
+- Message format: `feat: Add {Topic} Medium article (GEO: {score}/100)`
+- Automatically pushed to `master` branch
+
+### Medium Publishing
+
+**Option 1: Automated (Recommended)**
+1. Run `/publish {name}`
+2. Accept "Push to Medium as draft?" prompt (defaults to Yes)
+3. Browser automation imports article to Medium
+4. Review and publish in Medium editor
+
+**Option 2: Manual Import**
+1. Run `/publish {name}` (decline Medium import if prompted)
+2. Copy GitHub Pages URL from output
+3. Go to Medium → New Story → Import a story
+4. Paste GitHub Pages URL (**NOT** `raw.githubusercontent.com`)
+5. Import completes → review in editor
+
+**Post-Import Steps:**
+1. Reformat tables if needed (data preserved, columns may run together)
+2. Add tags from `MEDIUM_PUBLISH_INFO_{name}.md` (5 max)
+3. Add SEO description in Medium settings (Settings → More settings → SEO description)
+4. Preview and publish
+
+### Medium Import Technical Notes
 
 **CRITICAL: Use GitHub Pages URLs for Import**
 - Medium **ONLY accepts GitHub Pages URLs** for importing articles
-- Import URL format: `https://ghighcove.github.io/nfl-salary-analysis/article/filename.html`
+- Import URL format: `https://ghighcove.github.io/nfl-salary-analysis/article/{name}_medium_ready.html`
 - Medium **REJECTS** `raw.githubusercontent.com` URLs (returns "Import failed" error)
 - Images WITHIN the article content can use `raw.githubusercontent.com` URLs and will load correctly
 
-### Medium Import Methods
-
-**Preferred:** Import HTML files via GitHub Pages
-- URL format: `https://ghighcove.github.io/nfl-salary-analysis/article/filename.html`
-- Commit and push changes to GitHub to update the GitHub Pages content
-- Images within the HTML can reference `raw.githubusercontent.com` URLs successfully
-- HTML tables will lose formatting (columns run together) but data is preserved
-- Use image-based tables (table screenshots) for complex data tables
-
-**Image URLs Within Content:**
-- Format: `https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/image.png`
-- These work correctly when the HTML file is imported via GitHub Pages URL
-- Medium loads images from `raw.githubusercontent.com` without issues when referenced in imported content
-
 **Table Handling:**
 - HTML `<table>` elements import with data intact but lose column formatting
-- Options: (1) Reformat tables manually in Medium editor, (2) Use image-based tables, (3) Convert to prose/lists
+- Options: (1) Reformat manually in Medium editor, (2) Use image-based tables, (3) Convert to prose/lists
 - Image-based tables (screenshots of formatted tables) import perfectly
-
-**Don't:** Try to import from `raw.githubusercontent.com`
-- Medium's import tool rejects both markdown and HTML from `raw.githubusercontent.com`
-- Always use GitHub Pages URLs as the import source
