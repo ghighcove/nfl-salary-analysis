@@ -37,7 +37,7 @@ Conventional wisdom says Round 1 picks are the safest bets — teams are draftin
 
 ### Average Value Score by Draft Round (Rookie Contract Years)
 
-![Bar chart showing average value score by NFL draft round. Round 2 has highest value at +0.51, followed by Round 3 at +0.47, Round 1 at +0.36, declining to Round 7 at +0.15. All rounds show positive value indicating rookie contracts are team-friendly.](https://ghighcove.github.io/nfl-salary-analysis/article/draft-round-value.png)
+![Bar chart showing average value score by NFL draft round. Round 2 has highest value at +0.51, followed by Round 3 at +0.47, Round 1 at +0.36, declining to Round 7 at +0.15. All rounds show positive value indicating rookie contracts are team-friendly.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/draft-round-value.png)
 
 | Draft Round | Avg Value Score | Sample Size | % Bargains |
 |-------------|-----------------|-------------|------------|
@@ -63,7 +63,7 @@ When we break down value by **position group × draft round**, one combination d
 
 ### Top 5 Draft Sweet Spots
 
-![Heatmap showing average value score by NFL draft round (columns) and position group (rows). Round 5 QBs show highest value at +0.62 in bright green. Round 2-3 defensive backs also show strong values at +0.60. Round 1 running backs show near-zero value at +0.02 in red.](https://ghighcove.github.io/nfl-salary-analysis/article/position-round-heatmap.png)
+![Heatmap showing average value score by NFL draft round (columns) and position group (rows). Round 5 QBs show highest value at +0.62 in bright green. Round 2-3 defensive backs also show strong values at +0.60. Round 1 running backs show near-zero value at +0.02 in red.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/position-round-heatmap.png)
 
 | Position | Round | Avg Value Score | Sample Size | Notable Examples |
 |----------|-------|-----------------|-------------|------------------|
@@ -150,7 +150,7 @@ Every draft has a Cinderella story. Here are the top late-round picks (Rounds 3+
 
 ### Top 10 Late-Round Steals (2015-2024)
 
-![Horizontal bar chart showing top 10 late-round draft steals by value score. Justin Madubuike leads at +3.95, followed by Kerby Joseph at +3.40. Notable names include Tyreek Hill (Round 6, +2.73) and George Kittle (Round 5, +2.68).](https://ghighcove.github.io/nfl-salary-analysis/article/late-round-steals.png)
+![Horizontal bar chart showing top 10 late-round draft steals by value score. Justin Madubuike leads at +3.95, followed by Kerby Joseph at +3.40. Notable names include Tyreek Hill (Round 6, +2.73) and George Kittle (Round 5, +2.68).](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/late-round-steals.png)
 
 | Player | Position | Year | Round | Pick # | Value Score |
 |--------|----------|------|-------|--------|-------------|
@@ -198,7 +198,7 @@ Based on 10 years of data, here's the optimal draft strategy by position:
 
 ### Position-Specific Draft Strategy
 
-![Table visualization showing optimal draft strategy by position. QB: best in rounds 1-2 and 5, avoid 3-4 and 6. RB: best in rounds 2-3, avoid round 1. DB: best in rounds 2-3, avoid round 1. Color-coded green for recommended rounds, red for rounds to avoid.](https://ghighcove.github.io/nfl-salary-analysis/article/position-strategy-table.png)
+![Table visualization showing optimal draft strategy by position. QB: best in rounds 1-2 and 5, avoid 3-4 and 6. RB: best in rounds 2-3, avoid round 1. DB: best in rounds 2-3, avoid round 1. Color-coded green for recommended rounds, red for rounds to avoid.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/position-strategy-table.png)
 
 | Position | Best Rounds | Avoid | Notes |
 |----------|-------------|-------|-------|
