@@ -4,9 +4,10 @@
 Jupyter Notebook project analyzing NFL player performance statistics against salary data (2015-2024). Surfaces outliers — players who dramatically outperform or underperform their salary.
 
 ## Architecture
-- `src/` — Reusable Python modules (data_loader, cleaning, value_score, viz)
 - `notebooks/` — Sequential notebooks (01-04) that build on each other
 - `data/` — Cached parquet files (gitignored)
+- `article/` — Medium article draft and published HTML (GitHub Pages)
+- **Shared Library**: Analysis modules (data_loader, cleaning, value_score, viz) imported from [nfl-data-core](https://github.com/ghighcove/nfl-data-core) library
 
 ## Key Conventions
 - Salary is normalized as % of salary cap (`apy_cap_pct`) for cross-year comparison
@@ -19,9 +20,14 @@ Jupyter Notebook project analyzing NFL player performance statistics against sal
 All data from `nfl_data_py` library. Cached as parquet in `data/`.
 
 ## Running
-1. `pip install -r requirements.txt`
+1. `pip install -r requirements.txt` (installs nfl-data-core library from GitHub)
 2. Run notebooks in order: 01 → 02 → 03 → 04
 3. Each notebook saves outputs that the next one reads
+
+**Import Pattern in Notebooks:**
+```python
+from nfl_analysis import data_loader, cleaning, value_score, viz
+```
 
 ## Article Optimization (GEO)
 When writing or updating the Medium article (`article/medium_draft.md` + `article/medium_ready.html`):
