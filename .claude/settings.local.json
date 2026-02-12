@@ -32,7 +32,9 @@
       "Bash(git log:*)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(ls:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(identify:*)"
     ]
   }
 }
