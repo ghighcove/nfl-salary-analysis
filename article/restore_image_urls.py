@@ -16,16 +16,24 @@ def restore_image_urls():
         5: ('table_5_role_comparison.png', 'Table: Blocking vs Receiving TEs average value score comparison')
     }
 
-    # Replace each base64 data URI with URL
+    # Replace raw.githubusercontent.com URLs with GitHub Pages URLs
     for num, (filename, alt_text) in tables.items():
-        # Match base64 data URI pattern
-        pattern = rf'<img src="data:image/png;base64,[^"]*" alt="{re.escape(alt_text)}" />'
+        # Match either base64 data URI OR raw.githubusercontent.com URL
+        base64_pattern = rf'<img src="data:image/png;base64,[^"]*" alt="{re.escape(alt_text)}" />'
+        raw_github_pattern = rf'<img src="https://raw\.githubusercontent\.com/[^"]*/{re.escape(filename)}" alt="{re.escape(alt_text)}" />'
 
-        url = f'https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/te_market_inefficiency/{filename}'
+        url = f'https://ghighcove.github.io/nfl-salary-analysis/article/images/te_market_inefficiency/{filename}'
         replacement = f'<img src="{url}" alt="{alt_text}" />'
 
-        html = re.sub(pattern, replacement, html)
-        print(f"Restored URL for {filename}")
+        # Try base64 first, then raw.githubusercontent.com
+        if re.search(base64_pattern, html):
+            html = re.sub(base64_pattern, replacement, html)
+            print(f"Converted base64 to URL for {filename}")
+        elif re.search(raw_github_pattern, html):
+            html = re.sub(raw_github_pattern, replacement, html)
+            print(f"Converted raw.githubusercontent.com to GitHub Pages URL for {filename}")
+        else:
+            print(f"No match found for {filename}")
 
     html_path.write_text(html, encoding='utf-8')
     print(f"\nHTML file updated - size now: {len(html)} bytes")
