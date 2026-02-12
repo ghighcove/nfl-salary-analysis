@@ -2,17 +2,19 @@
 
 ## 🎯 Current Focus
 
-**Active Article:** Draft ROI Analysis (Medium draft - final publication pending)
-**Next Article:** Running Back Economics (extends draft ROI findings)
+**Active Articles:** RB Economics & QB Deep Dive (Ready - deferred Medium import)
+**Next Article:** Wide Receiver Value Windows (Position series continues)
 
 ---
 
-## 📊 Pipeline Status: 2 of 20 articles completed
+## 📊 Pipeline Status: 5 of 20 articles completed
 
 - ✅ **Player Value Analysis** (Published)
 - ✅ **Draft Class ROI Analysis** (Medium draft - awaiting final publication)
-- 🔄 **Running Back Economics** (Next up)
-- ⏳ **17 articles queued**
+- ✅ **TE Market Inefficiency** (Medium draft - awaiting final publication)
+- ✅ **Running Back Economics** (READY - deferred Medium import, GEO: 95/100)
+- ✅ **Quarterback Value Deep Dive** (READY - deferred Medium import, GEO: 97/100)
+- ⏳ **15 articles queued**
 
 ---
 
@@ -28,35 +30,37 @@
 
 Standard template for each position: value trends, draft ROI, contract patterns, top bargains/busts.
 
-### 1. Running Back Economics 🔄 NEXT
-- **Effort:** Small (1 week)
-- **GEO Target:** 95+
-- **Key Angle:** "Why first-round RBs are poor value" (extends draft ROI findings)
-- **Analysis Components:**
-  - Career arc (peak age, decline rate)
-  - Draft ROI by round (confirm Rd 1-2 RBs barely break even)
-  - Top 10 bargains (late-round steals)
-  - Top 10 busts (first-round disappointments)
-  - Positional scarcity vs. replaceability analysis
-- **Notebook:** `06_rb_economics.ipynb`
-- **Article:** `article/rb_economics_medium_draft.md`
-- **Why First:** Quick win, extends existing analysis, high reader interest
+### 1. Running Back Economics ✅ COMPLETE
+- **Status:** READY for Medium import (deferred per user request)
+- **GEO Score:** 95/100 (A+)
+- **Effort:** Small (1 week) — COMPLETED 2026-02-11
+- **Key Findings:**
+  - Round 3 RBs deliver +0.555 avg value (best ROI)
+  - First-round RBs: +0.015 avg (near-zero value)
+  - RBs peak Years 1-2, crater by Year 3 (-86% decline)
+  - UDFAs outperform drafted RBs (+0.065 vs -0.016)
+  - Christian McCaffrey: -2.051 value (elite production, negative ROI)
+- **Notebook:** `06_rb_economics.ipynb` ✅
+- **Article:** `article/rb_economics_medium_draft.md` ✅
+- **Visualizations:** 6 charts in `article/images/rb_economics/` ✅
+- **Medium URL:** Deferred (see `MEDIUM_PUBLISH_INFO_rb_economics.md`)
 
-### 2. Quarterback Value Deep Dive
-- **Effort:** Medium (2 weeks)
-- **GEO Target:** 95+
-- **Key Angle:** Draft success rates and rookie contract vs. second contract performance
-- **Analysis Components:**
-  - Value score distribution (bargains vs. overpaid)
-  - Draft success rates by pick range (1-10, 11-32, 33-100, 100+)
-  - Rookie contract performance vs. second contract efficiency
-  - Top bargain QBs (Brock Purdy, Dak Prescott rookie deal, Geno Smith)
-  - Career arc (when do QBs peak?)
-  - Salary inflation trends (QB market growth 2015-2024)
-- **Notebook:** `07_qb_deep_dive.ipynb`
-- **Article:** `article/qb_value_deep_dive_medium_draft.md`
+### 2. Quarterback Value Deep Dive ✅ COMPLETE
+- **Status:** READY for Medium import (deferred per user request)
+- **GEO Score:** 97/100 (A+)
+- **Effort:** Medium (2 weeks) — COMPLETED 2026-02-11
+- **Key Findings:**
+  - Round 5 QBs deliver +0.623 avg value (best ROI)
+  - Rookie contracts = +0.455, second contracts = -0.353 (value crater)
+  - QB salaries grew 30.8% as % of cap (2015-2024: 6.76% → 8.83%)
+  - Top 10 picks: 58% success rate, Late R1: 62% success rate
+  - Brock Purdy (+1.541) leads all QBs in career value
+- **Notebook:** `07_qb_deep_dive.ipynb` ✅
+- **Article:** `article/qb_value_deep_dive_medium_draft.md` ✅
+- **Visualizations:** 8 charts in `article/images/qb_deep_dive/` ✅
+- **Medium URL:** Deferred (see `MEDIUM_PUBLISH_INFO_qb_deep_dive.md`)
 
-### 3. Wide Receiver Value Windows
+### 3. Wide Receiver Value Windows 🔄 NEXT
 - **Effort:** Medium (2 weeks)
 - **GEO Target:** 95+
 - **Key Angle:** When do WRs peak? Career arc and contract efficiency analysis
@@ -579,5 +583,6 @@ Based on user interests and quick wins:
 ---
 
 **Last Updated:** 2026-02-11
-**Articles Completed:** 2 / 20
-**Next Milestone:** 5 articles by end of Month 1
+**Articles Completed:** 5 / 20
+**Articles Ready for Medium:** 2 (RB Economics, QB Deep Dive - deferred 3-5 days)
+**Next Milestone:** 8 articles by end of Month 1
