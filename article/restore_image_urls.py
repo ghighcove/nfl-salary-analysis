@@ -16,22 +16,25 @@ def restore_image_urls():
         5: ('table_5_role_comparison.png', 'Table: Blocking vs Receiving TEs average value score comparison')
     }
 
-    # Replace raw.githubusercontent.com URLs with GitHub Pages URLs
+    # Convert table image URLs to raw.githubusercontent.com format
     for num, (filename, alt_text) in tables.items():
-        # Match either base64 data URI OR raw.githubusercontent.com URL
+        # Match base64, raw.githubusercontent.com, OR GitHub Pages URLs
         base64_pattern = rf'<img src="data:image/png;base64,[^"]*" alt="{re.escape(alt_text)}" />'
         raw_github_pattern = rf'<img src="https://raw\.githubusercontent\.com/[^"]*/{re.escape(filename)}" alt="{re.escape(alt_text)}" />'
+        gh_pages_pattern = rf'<img src="https://ghighcove\.github\.io/[^"]*/{re.escape(filename)}" alt="{re.escape(alt_text)}" />'
 
-        url = f'https://ghighcove.github.io/nfl-salary-analysis/article/images/te_market_inefficiency/{filename}'
+        url = f'https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/te_market_inefficiency/{filename}'
         replacement = f'<img src="{url}" alt="{alt_text}" />'
 
-        # Try base64 first, then raw.githubusercontent.com
+        # Try all three patterns
         if re.search(base64_pattern, html):
             html = re.sub(base64_pattern, replacement, html)
-            print(f"Converted base64 to URL for {filename}")
+            print(f"Converted base64 to raw.githubusercontent.com for {filename}")
+        elif re.search(gh_pages_pattern, html):
+            html = re.sub(gh_pages_pattern, replacement, html)
+            print(f"Converted GitHub Pages to raw.githubusercontent.com for {filename}")
         elif re.search(raw_github_pattern, html):
-            html = re.sub(raw_github_pattern, replacement, html)
-            print(f"Converted raw.githubusercontent.com to GitHub Pages URL for {filename}")
+            print(f"Already using raw.githubusercontent.com for {filename}")
         else:
             print(f"No match found for {filename}")
 
