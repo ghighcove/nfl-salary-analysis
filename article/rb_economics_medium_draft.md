@@ -16,7 +16,7 @@ By analyzing **1,249 running back player-seasons** spanning 2015-2024, we can fi
 - **First-round RBs provide near-zero value** (+0.015 avg) during rookie contracts — the worst ROI of any draft round
 - **Rounds 2-3 RBs deliver 35x better value** than Round 1 picks (+0.526 and +0.555 vs +0.015)
 - **Running backs peak in Year 1-2**, then decline sharply by Year 3 — the shortest career arc of any position
-- **Undrafted free agents (UDFAs) outperform drafted RBs** (+0.065 vs -0.016 avg value) — positional replaceability is real
+- **Undrafted free agents (UDFAs — players not selected in the draft) outperform drafted RBs** (+0.065 vs -0.016 avg value) — positional replaceability is real
 - **Elite first-round RBs are actually value busts**: Christian McCaffrey, Ezekiel Elliott, and Marshawn Lynch all posted negative career value scores despite Pro Bowl production
 
 ## The Value Score Methodology
@@ -76,7 +76,7 @@ Unlike quarterbacks who develop over years, running backs deliver peak value alm
 
 **Peak performance occurs in Years 1-2** (+0.505 and +0.504 avg value), coinciding exactly with the rookie contract window. But by Year 3, value has already cratered to +0.069 — a **86% decline**.
 
-**The average drafted NFL running back career lasts just 4.2 seasons** — the shortest career length of any non-specialist position group. This creates a brutal economic reality: Teams pay running backs based on past production (Years 1-2), but they're buying declining assets. By the time an RB reaches a second contract (typically after Year 4), they're already past peak.
+**Running backs have the shortest NFL careers of any position: just 4.2 seasons on average.** This creates a brutal economic reality for teams paying RBs based on past production (Years 1-2) while buying declining assets. By the time an RB reaches a second contract (typically after Year 4), they're already past peak.
 
 **Why the rapid decline?**
 
@@ -118,7 +118,7 @@ While first-round busts make headlines, late-round RB gems consistently deliver 
 
 ## Finding #4: Elite First-Round RBs Are Actually Value Busts
 
-This is the most controversial finding: Some of the NFL's most celebrated running backs posted **negative career value scores** because their salaries never justified their production.
+Some of the NFL's most celebrated running backs — Christian McCaffrey, Ezekiel Elliott, Marshawn Lynch — posted **negative career value scores** because their salaries never justified their production. This is the most controversial finding:
 
 ### Top 10 First-Round RB Busts (Career Average Value)
 
@@ -232,7 +232,7 @@ Save that pick for a cornerstone position (QB, OT, EDGE, CB) and find your RB1 i
 - **Play-by-play data**: [nfl_data_py library](https://github.com/nflverse/nfl_data_py) (2015-2024 seasons)
 - **Salary data**: [OverTheCap.com](https://overthecap.com/) (APY as % of salary cap)
 - **Draft data**: [Pro Football Reference](https://www.pro-football-reference.com/)
-- **Performance metrics**: Rushing yards, receiving yards, touchdowns, EPA (Expected Points Added), scrimmage yards
+- **Performance metrics**: Rushing yards, receiving yards, touchdowns, EPA (Expected Points Added — a play-level efficiency metric), scrimmage yards
 
 **Value score calculation:**
 - Performance z-score: Composite metric of rushing yards, receiving yards, TDs, and efficiency metrics, normalized by position group and season
