@@ -124,13 +124,25 @@ After running `/publish {name}`, you'll receive:
 
 ### Medium Import Technical Notes
 
-**CRITICAL: Use GitHub Pages URLs for Import**
+**CRITICAL: Medium Caches Imported URLs by Filename**
+- Medium aggressively caches imported articles by their GitHub Pages URL path
+- Updating file content does NOT bust the cache - Medium serves old cached version
+- **SOLUTION:** Always use UNIQUE timestamped filename for each import
+- **Required format:** `{article_name}_{YYYYMMDD}_{HHMM}.html`
+- Example: `te_market_inefficiency_20260211_1630.html`
+- ❌ **NEVER** reuse `*_medium_ready.html` filename after updating content
+- ✅ **ALWAYS** generate new filename with timestamp/hash for each publish
+
+**Import URL Format**
 - Medium **ONLY accepts GitHub Pages URLs** for importing articles
-- Import URL format: `https://ghighcove.github.io/nfl-salary-analysis/article/{name}_medium_ready.html`
-- Medium **REJECTS** `raw.githubusercontent.com` URLs (returns "Import failed" error)
+- Import URL format: `https://ghighcove.github.io/nfl-salary-analysis/article/{unique_filename}.html`
+- Medium **REJECTS** `raw.githubusercontent.com` URLs for article import (returns "Import failed" error)
 - Images WITHIN the article content can use `raw.githubusercontent.com` URLs and will load correctly
 
-**Table Handling:**
-- HTML `<table>` elements import with data intact but lose column formatting
-- Options: (1) Reformat manually in Medium editor, (2) Use image-based tables, (3) Convert to prose/lists
-- Image-based tables (screenshots of formatted tables) import perfectly
+**Table Images (RECOMMENDED)**
+- PNG table images work perfectly when cache is bypassed
+- Wrap images in `<p>` tags: `<p><img alt="Table visualization showing..." src="..." /></p>`
+- Use `raw.githubusercontent.com` URLs for image sources
+- Alt text format: "Table visualization showing [detailed description]"
+- Filenames like `table_1_description.png` work fine
+- **DO NOT** embed as base64 or convert to HTML tables unnecessarily
