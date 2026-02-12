@@ -1,9 +1,14 @@
 """
-Convert markdown to Medium-compatible HTML
+Convert markdown to Medium-compatible HTML with unique timestamped filename
+
+CRITICAL: Always generates unique filename to bypass Medium's aggressive caching.
 """
 
 import re
+import sys
+import hashlib
 from pathlib import Path
+from datetime import datetime
 
 def markdown_to_html(md_text):
     """Convert markdown to clean HTML for Medium import"""
@@ -15,8 +20,8 @@ def markdown_to_html(md_text):
     html = re.sub(r'^## (.+)$', r'<h2>\1</h2>', html, flags=re.MULTILINE)
     html = re.sub(r'^### (.+)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
 
-    # Convert images with alt text
-    html = re.sub(r'!\[([^\]]+)\]\(([^\)]+)\)', r'<img src="\2" alt="\1" />', html)
+    # Convert images with alt text - WRAP IN <p> TAGS (Medium import requirement)
+    html = re.sub(r'!\[([^\]]+)\]\(([^\)]+)\)', r'<p><img src="\2" alt="\1" /></p>', html)
 
     # Convert links
     html = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2">\1</a>', html)
@@ -136,33 +141,83 @@ def convert_table(table_lines):
 
     return '\n'.join(html)
 
-# Read markdown file
-input_file = Path('te_market_inefficiency_medium_draft.md')
-output_file = Path('te_market_inefficiency_medium_ready.html')
+def generate_unique_filename(article_name, content):
+    """
+    Generate unique timestamped filename to bypass Medium caching.
 
-print(f"Reading {input_file}...")
-md_content = input_file.read_text(encoding='utf-8')
+    CRITICAL: Medium caches imported URLs by filename. Using the same filename
+    will serve cached version even if content changes. Always use unique names.
 
-print("Converting markdown to HTML...")
-html_content = markdown_to_html(md_content)
+    Format: {article_name}_{YYYYMMDD}_{HHMM}_{hash}.html
+    Example: te_market_inefficiency_20260211_1630_a3f2b1c4.html
+    """
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M')
+    content_hash = hashlib.md5(content.encode()).hexdigest()[:8]
+    return f"{article_name}_{timestamp}_{content_hash}.html"
 
-# Wrap in basic HTML structure
-full_html = f"""<!DOCTYPE html>
+def convert_article(article_name):
+    """Convert markdown article to Medium-ready HTML with unique filename"""
+
+    input_file = Path(f'{article_name}_medium_draft.md')
+
+    if not input_file.exists():
+        print(f"❌ Error: {input_file} not found")
+        print(f"\nUsage: python convert_to_html.py <article_name>")
+        print(f"Example: python convert_to_html.py te_market_inefficiency")
+        return None
+
+    print(f"Reading {input_file}...")
+    md_content = input_file.read_text(encoding='utf-8')
+
+    print("Converting markdown to HTML...")
+    html_content = markdown_to_html(md_content)
+
+    # Extract title from markdown (first # header)
+    title_match = re.search(r'^# (.+)$', md_content, re.MULTILINE)
+    title = title_match.group(1) if title_match else article_name.replace('_', ' ').title()
+
+    # Wrap in basic HTML structure
+    full_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tight End Market Inefficiency</title>
+    <title>{title}</title>
 </head>
 <body>
 {html_content}
 </body>
 </html>"""
 
-print(f"Writing {output_file}...")
-output_file.write_text(full_html, encoding='utf-8')
+    # Generate unique filename (CRITICAL for Medium import)
+    output_filename = generate_unique_filename(article_name, full_html)
+    output_file = Path(output_filename)
 
-print(f"\n✓ Conversion complete!")
-print(f"✓ Output: {output_file.resolve()}")
-print(f"\nMedium import URL:")
-print(f"https://ghighcove.github.io/nfl-salary-analysis/article/te_market_inefficiency_medium_ready.html")
+    print(f"Writing {output_file}...")
+    output_file.write_text(full_html, encoding='utf-8')
+
+    # Generate GitHub Pages URL
+    github_pages_url = f"https://ghighcove.github.io/nfl-salary-analysis/article/{output_filename}"
+
+    print(f"\n✓ Conversion complete!")
+    print(f"✓ Output: {output_file.resolve()}")
+    print(f"\n📋 Medium import URL (copy this):")
+    print(f"{github_pages_url}")
+    print(f"\n⚠️  IMPORTANT: This is a unique timestamped URL to bypass Medium's cache.")
+    print(f"   Do NOT reuse old filenames - always run this script for fresh imports.")
+
+    return output_filename
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print("Usage: python convert_to_html.py <article_name>")
+        print("\nExample:")
+        print("  python convert_to_html.py te_market_inefficiency")
+        print("\nThis will convert:")
+        print("  te_market_inefficiency_medium_draft.md")
+        print("To:")
+        print("  te_market_inefficiency_YYYYMMDD_HHMM_hash.html")
+        sys.exit(1)
+
+    article_name = sys.argv[1]
+    convert_article(article_name)
