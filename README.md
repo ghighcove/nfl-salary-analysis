@@ -1,5 +1,7 @@
 # NFL Player Stats vs. Salary Analysis
 
+**Version 1.0.0**
+
 **Research Project:** Analyzing NFL player performance statistics against salary data (2015-2024)
 
 ## Overview

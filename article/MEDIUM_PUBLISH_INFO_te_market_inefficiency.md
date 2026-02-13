@@ -10,7 +10,7 @@
 
 **GEO Score:** 97/100 (Optimized for AI discoverability)
 
-**Publication Status:** Draft complete, ready to publish
+**Publication Status:** Published to Medium (2026-02-13)
 
 ---
 
@@ -120,12 +120,12 @@ All images use GitHub raw URLs: `https://raw.githubusercontent.com/ghighcove/nfl
 - [x] SEO meta description prepared
 
 ### After Import (Manual Steps in Medium Editor)
-- [ ] Add 5 tags (see above)
-- [ ] Add SEO description in Settings → More settings
-- [ ] Preview article (check image rendering)
-- [ ] Verify tables imported correctly (may need reformatting)
-- [ ] Set publication date (if scheduling)
-- [ ] Publish or save as draft
+- [x] Add 5 tags (see above)
+- [x] Add SEO description in Settings → More settings
+- [x] Preview article (check image rendering)
+- [x] Verify tables imported correctly (may need reformatting)
+- [x] Set publication date (if scheduling)
+- [x] Publish or save as draft
 
 ### Post-Publication
 - [ ] Share on X/Twitter with prepared copy

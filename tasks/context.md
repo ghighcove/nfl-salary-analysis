@@ -1,63 +1,77 @@
 # NFL Stats vs Salary Analysis - Session Context
 
-## Last Updated: 2026-02-11
+## Last Updated: 2026-02-13
 
 ## Current State
-- **Three articles complete:** Player Value, Draft ROI, Tight End Market Inefficiency
+- **Four articles complete:** Player Value, Draft ROI, Running Back Economics, Tight End Market Inefficiency
 - Original article: Published to Medium, GitHub Pages enabled
 - Draft ROI article: In Medium draft (pending final publication)
-- **TE Market Inefficiency article: IMPORTED TO MEDIUM** (Draft ID: 535ee5028fc9)
+- **TE Market Inefficiency article:** Scheduled for Medium (Feb 20, 7:03 PM PST)
   - GEO score: 97/100 (A) — excellent LLM discoverability
-  - Successfully imported with unique timestamped filename
-  - **5 tags added:** NFL Draft, NFL, Data Analysis, Sports Analytics, Football
-  - **Pending:** Manual schedule adjustment (Feb 18, 4:09 PM PST) and SEO description
-- **Medium caching issue RESOLVED** — Unique filename generation working
-- `/publish` skill fully functional with automated Medium import
-- 9,041 player-seasons (original) + 3,657 (draft ROI) + 1,063 TE seasons analyzed
+  - 5 tags added, SEO description complete
+- **RB Economics article: READY FOR RE-IMPORT WITH TABLE FIX**
+  - GEO score: 95/100 (A+)
+  - **Tables fixed:** All 5 data tables converted to PNG images for Medium compatibility
+  - New HTML export: `rb_economics_20260213_1240.html` (unique timestamp)
+  - **Pending:** Re-import to Medium and schedule to 2/24/2026
+- 9,041 player-seasons (original) + 3,657 (draft ROI) + 1,249 RB seasons + 1,063 TE seasons analyzed
 - GitHub repo: `ghighcove/nfl-salary-analysis` — public, GitHub Pages enabled
 - **Shared library**: Uses `nfl-data-core` library from separate repo
 
 ## Active Work
-- **COMPLETED: TE Market Inefficiency article automation**
-  - Fixed Medium caching bug (unique filename generation)
-  - Automated Medium import with browser automation
-  - Successfully imported article with all 11 images (6 charts + 5 tables)
-  - All 5 tags added automatically
-  - Article ready for manual scheduling and SEO description
+- **COMPLETED: RB Economics table fix for Medium compatibility**
+  - Generated 5 PNG table images using matplotlib
+  - Updated markdown to reference PNG images (not markdown tables)
+  - Created new timestamped HTML export (20260213_1240)
+  - Committed and pushed to GitHub
+  - Updated publishing metadata
+  - **Reason:** Medium doesn't render HTML `<table>` tags well — PNG images ensure proper formatting
 
 ## Key Design Decisions
+
+### Medium Table Handling — CRITICAL FIX APPLIED
+**Problem:** Medium strips or mangles HTML `<table>` tags, causing tables to run together or misalign.
+
+**Solution (PERMANENT RULE):**
+- **Always convert tables to PNG images** for Medium articles
+- Use matplotlib to generate clean, professional table visualizations
+- Style: White background, dark header (white text), alternating row colors, 300 DPI
+- Filename pattern: `table_{n}_{description}.png`
+- Wrap images in `<p>` tags: `<p><img alt="..." src="..." /></p>`
+- Descriptive alt text: "Table visualization showing [detailed table content summary]"
+
+**This rule is documented in:**
+- Global `~/.claude/CLAUDE.md`
+- Project `CLAUDE.md`
+- `G:\ai\medium-publishing-standards\STANDARDS.md`
 
 ### Medium Import Automation — CRITICAL UPDATES
 **Unique Filename Generation (MANDATORY):**
 - Medium caches imported URLs by filename aggressively
 - **Solution:** Always generate unique timestamped filename for each import
-- **Format:** `{article_name}_{YYYYMMDD}_{HHMM}_{hash}.html`
-- **Implementation:** Updated `convert_to_html.py` with `generate_unique_filename()` function
+- **Format:** `{article_name}_{YYYYMMDD}_{HHMM}.html`
 - **Result:** Bypasses Medium cache, enables immediate re-imports after fixes
 
 **Working Browser Automation Flow:**
-1. Navigate directly to `https://medium.com/p/import`
-2. Click URL input field
-3. Type GitHub Pages URL (unique filename)
+1. Navigate to `https://medium.com/me/stories`
+2. Click "Import a story" button
+3. Paste GitHub Pages URL (unique filename)
 4. Click "Import" button
 5. Wait for import completion
-6. Add tags via typing + Enter (5 tags max)
-7. Manual steps: Schedule date/time, add SEO description in settings
-
-**Medium Date Picker Issue:**
-- Automated clicks on calendar dates don't register reliably
-- **Workaround:** User manually adjusts publication date after tag automation
-- **SEO Description:** Added via story settings (... menu → Story settings → Advanced → SEO description)
+6. Add tags via publish dialog
+7. Add SEO description via story settings
+8. Schedule publication date
 
 **Image Format (VERIFIED WORKING):**
 - Wrap images in `<p>` tags: `<p><img src="..." alt="..." /></p>`
 - Use raw.githubusercontent.com URLs for images within content
-- Table images import perfectly as PNGs when cache is bypassed
+- Table images (PNG) import perfectly when cache is bypassed
 
 ### Article Production Strategy
 - **Pipeline focus**: 20 articles across 3 series (10 position, 8 team, 2 contract)
 - **Quality standard**: 95+ GEO score (mandatory for portfolio visibility)
 - **Automation:** `/publish` skill handles full pipeline (GEO → HTML → Git → Medium import)
+- **Table handling:** Always convert to PNG for Medium (permanent rule)
 
 ### Article Analysis
 - **Value Score**: `performance_zscore - salary_zscore` within position groups
@@ -66,91 +80,100 @@
 
 ## Recent Changes (this session)
 
-### Medium Caching Fix — CRITICAL
-**Problem discovered:**
-- Medium caches imported article URLs by filename
-- Updating file content doesn't bust cache
-- Wasted 2+ hours debugging "broken" fixes that were actually cached
-
-**Solution implemented:**
-- Updated `convert_to_html.py` with unique filename generation
-- Format: `{article_name}_{YYYYMMDD}_{HHMM}_{hash}.html`
-- Example: `te_market_inefficiency_20260211_1730_36aad799.html`
-- Uses MD5 hash of content for uniqueness
+### RB Economics Table Fix — COMPLETE
+**Files created:**
+- `article/images/rb_economics/table_1_draft_round_comparison.png`
+- `article/images/rb_economics/table_2_career_arc.png`
+- `article/images/rb_economics/table_3_top_bargains.png`
+- `article/images/rb_economics/table_4_top_busts.png`
+- `article/images/rb_economics/table_5_replaceability.png`
+- `article/rb_economics_20260213_1240.html` (new timestamped HTML export)
+- `generate_table_images.py` (utility script)
+- `export_rb_economics_html.py` (utility script)
 
 **Files modified:**
-- `article/convert_to_html.py` — Added `generate_unique_filename()` function
-- `tasks/lessons.md` — Documented caching issue with detailed troubleshooting
-- `CLAUDE.md` — Added mandatory unique filename requirement
+- `article/rb_economics_medium_draft.md` — Replaced markdown tables with PNG image references
+- `article/MEDIUM_PUBLISH_INFO_rb_economics.md` — Updated metadata for table fix
 
 **Git commits:**
-- 24c63e7: "feat: Add unique filename generation to bypass Medium cache"
-- 52c6550: "feat: Add TE Market Inefficiency article with unique filename"
+1. `fix: Convert RB Economics tables to PNG for Medium compatibility` (commit e32ef3c)
+   - Generated 5 PNG table images
+   - Updated markdown with image references
+   - Created timestamped HTML export
+2. `docs: Update RB Economics publishing metadata for table fix` (commit 9607e8c)
+   - Updated GitHub Pages URL to new timestamped version
+   - Documented table PNG conversion
+   - Updated image count (11 total: 6 charts + 5 table PNGs)
 
-### TE Market Inefficiency Article
-**Files created:**
-- `article/te_market_inefficiency_20260211_1730_36aad799.html` — Unique timestamped HTML
-- Successfully imported to Medium (Draft ID: 535ee5028fc9)
+**Implementation details:**
+- Used matplotlib to create clean table visualizations
+- Style: Dark header (#2C3E50) with white text, alternating row colors, 12pt font, 300 DPI
+- Fixed Unicode encoding issue on Windows (replaced ✓ with [OK] in print statements)
+- All changes committed and pushed to GitHub
 
-**Automation success:**
-- ✅ Article import via GitHub Pages URL
-- ✅ All 11 images imported correctly (6 charts + 5 tables)
-- ✅ 5 tags added automatically (NFL Draft, NFL, Data Analysis, Sports Analytics, Football)
-- ⏸️ Manual completion needed: Schedule date (Feb 18, 4:09 PM PST) and SEO description
-
-**SEO description (ready to paste):**
-```
-Round 2 TEs deliver +0.582 value (highest ROI), while first-round picks have 60% bust rate. Sam LaPorta, George Kittle data analysis of 1,063 TE seasons (2015-2024).
-```
-
-### Uncommitted Files
-- `.claude/settings.local.json` (1 file modified)
+### Uncommitted Files (Outstanding)
+- `.claude/settings.local.json` (modified)
+- `README.md` (modified)
+- `article/MEDIUM_PUBLISH_INFO_te_market_inefficiency.md` (modified)
+- `src/__init__.py` (modified)
+- `tasks/context.md` (this file — modified)
+- `VERSION` (untracked)
+- **Total:** 5 modified, 1 untracked
 
 ## Blockers / Open Questions
-- **No blockers.** TE article successfully imported, automation working.
-- **Minor:** Medium date picker doesn't respond to automated clicks (manual workaround works)
+- **No blockers.** RB Economics article ready for re-import with table fix.
+- TE article scheduled for Feb 20, 7:03 PM PST
+- Table-to-PNG workflow validated and documented
 
 ## Next Steps
-1. **Complete TE article publication** (5-10 min manual)
-   - Open Medium draft: https://medium.com/p/535ee5028fc9/edit
-   - Click "Publish" → "Schedule for later"
-   - Set date: Feb 18, 2026, 4:09 PM PST
-   - Add SEO description in story settings (180 chars ready)
-   - Publish/schedule
+1. **User: Re-import RB Economics article to Medium** (5-10 min)
+   - Wait 1-2 minutes for GitHub Pages to update
+   - Go to Medium → New Story → Import a story
+   - Paste GitHub Pages URL: `https://ghighcove.github.io/nfl-salary-analysis/article/rb_economics_20260213_1240.html`
+   - Verify all 11 images load (6 charts + 5 table PNGs)
+   - Verify tables display as images (not HTML tables)
+   - Add tags and SEO description (metadata file has details)
+   - Delete old draft with HTML tables
+   - Schedule to Feb 24, 2026
 
-2. **Finish Draft ROI article** (30-60 min)
-   - Open Medium draft (ID: f2cdfa739f9e)
-   - Complete final publication steps
+2. **Commit remaining uncommitted files** (5 min)
+   - Review modified files (5 modified, 1 untracked)
+   - Commit message: "docs: Update session context and metadata"
+   - Push to GitHub
 
-3. **Document automation workflow** (DONE in this session)
-   - Updated lessons.md with caching fix
-   - Updated CLAUDE.md with mandatory requirements
-   - Automation now reliable and repeatable
-
-4. **Start Article #4: Next position deep dive** (1 week)
+3. **Start Article #5: Next position deep dive** (Future session)
+   - Options: QB Value Deep Dive, WR Value Windows, OL analysis
    - Continue through pipeline (PROJECT_PIPELINE.md)
+   - **Always apply table-to-PNG rule** for any Medium articles
 
 ## Environment
 - Platform: Windows (win32), Python 3.8.2 (32-bit)
 - Working directory: G:\ai\nfl
-- Key packages: nfl-data-py, fastparquet 0.7.2, pandas 2.0.3, plotly, markdown 3.4.3
+- Key packages: nfl-data-py, fastparquet 0.7.2, pandas 2.0.3, plotly, markdown 3.4.3, matplotlib
 - GitHub repo: ghighcove/nfl-salary-analysis (public, GitHub Pages enabled)
 - Browser automation: claude-in-chrome MCP server (for Medium import)
 
 ## Quick Reference
 - **Project CLAUDE.md**: `G:\ai\nfl\CLAUDE.md`
+- **Publishing Standards**: `G:\ai\medium-publishing-standards\STANDARDS.md`
 - **Project Pipeline**: `G:\ai\nfl\PROJECT_PIPELINE.md` (20-article roadmap)
 - **Git repo**: https://github.com/ghighcove/nfl-salary-analysis (branch: master)
-- **Lessons learned**: `tasks/lessons.md` (includes Medium caching fix)
+- **Lessons learned**: `tasks/lessons.md`
 - **Session context**: `tasks/context.md`
 
 ### Article URLs
-**TE Market Inefficiency (Article #3):**
-- Medium draft: https://medium.com/p/535ee5028fc9/edit
-- GitHub Pages: https://ghighcove.github.io/nfl-salary-analysis/article/te_market_inefficiency_20260211_1730_36aad799.html
+**RB Economics (Article #3):**
+- **New GitHub Pages URL (with table fix):** https://ghighcove.github.io/nfl-salary-analysis/article/rb_economics_20260213_1240.html
+- Old URL (deprecated): ~~https://ghighcove.github.io/nfl-salary-analysis/article/rb_economics_20260211_1825.html~~
+- Publishing info: `article/MEDIUM_PUBLISH_INFO_rb_economics.md`
+- GEO score: 95/100 (A+)
+- Status: Ready for re-import with table fix (11 images: 6 charts + 5 table PNGs)
+
+**TE Market Inefficiency (Article #4):**
+- Medium: Scheduled for Feb 20, 7:03 PM PST
 - Publishing info: `article/MEDIUM_PUBLISH_INFO_te_market_inefficiency.md`
 - GEO score: 97/100 (A)
-- Status: Imported, tags added, awaiting manual schedule + SEO description
+- Status: Complete and scheduled
 
 **Draft ROI (Article #2):**
 - Medium draft: https://medium.com/p/f2cdfa739f9e/edit
@@ -162,6 +185,8 @@ Round 2 TEs deliver +0.582 value (highest ROI), while first-round picks have 60%
 - Status: Published
 
 ### Pipeline Status
-- **Completed:** 3 of 20 articles (Player Value, Draft ROI, TE Market Inefficiency)
+- **Completed:** 4 of 20 articles (Player Value, Draft ROI, RB Economics, TE Market Inefficiency)
 - **In progress:** Finalizing articles #2 and #3 for publication
+- **Next:** QB Value Deep Dive or WR Value Windows
 - **Target:** 5-10 articles in 2-3 months
+- **New rule applied:** Tables → PNG images for all Medium articles

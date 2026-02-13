@@ -35,7 +35,8 @@
       "Bash(python3:*)",
       "Bash(git ls-tree:*)",
       "Bash(identify:*)",
-      "WebFetch(domain:medium.com)"
+      "WebFetch(domain:medium.com)",
+      "Bash(.html \")"
     ]
   }
 }
