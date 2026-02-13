@@ -39,15 +39,7 @@ All analysis focuses on **rookie contract years (years 1-4 post-draft)** when te
 
 ![Bar chart showing average value score by draft round for running backs during rookie contract years. Round 3 shows highest value at +0.555 in green, Round 2 at +0.526 in green, Round 5 at +0.404 in orange, Round 6 at +0.346 in orange, Round 4 at +0.332 in orange, Round 7 at +0.213 in orange, and Round 1 shows near-zero value at +0.015 in red. A dashed gray line at 0 separates positive from negative value.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/rb_economics/draft_roi_by_round.png)
 
-| Draft Round | Avg Value Score | Sample Size | % Bargains |
-|-------------|-----------------|-------------|------------|
-| **Round 3** | **+0.555** | 87 | 8.0% |
-| **Round 2** | **+0.526** | 76 | 7.9% |
-| Round 5 | +0.404 | 88 | 5.7% |
-| Round 6 | +0.346 | 65 | 5.2% |
-| Round 4 | +0.332 | 94 | 4.3% |
-| Round 7 | +0.213 | 87 | 2.3% |
-| **Round 1** | **+0.015** | **52** | **1.9%** |
+![Table visualization showing average value score by draft round for running backs during rookie contract years, with columns for Draft Round, Avg Value Score, Sample Size, and % Bargains. Round 3 leads at +0.555, followed by Round 2 at +0.526, while Round 1 shows near-zero value at +0.015.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/rb_economics/table_1_draft_round_comparison.png)
 
 **Why does Round 1 fail so spectacularly?**
 
@@ -65,14 +57,7 @@ Unlike quarterbacks who develop over years, running backs deliver peak value alm
 
 ![Line chart showing average value score by years since draft for running backs. Peak occurs at Year 1 with value score of +0.505, stays high in Year 2 at +0.504, then drops sharply to +0.069 in Year 3, continues declining through Year 10. Includes markers showing sample size at each year. Dashed gray line at 0 separates positive from negative value.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/rb_economics/career_arc.png)
 
-| Years Since Draft | Avg Value Score | Sample Size |
-|-------------------|-----------------|-------------|
-| **Year 1** | **+0.505** | 338 |
-| **Year 2** | **+0.504** | 282 |
-| Year 3 | +0.069 | 225 |
-| Year 4 | -0.074 | 175 |
-| Year 5 | -0.156 | 121 |
-| Year 6+ | **-0.300 avg** | 108 |
+![Table visualization showing RB career arc with value score by years of experience, with columns for Years Since Draft, Avg Value Score, and Sample Size. Peak occurs at Year 1 (+0.505) and Year 2 (+0.504), then drops sharply to +0.069 in Year 3 and becomes negative by Year 4.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/rb_economics/table_2_career_arc.png)
 
 **Peak performance occurs in Years 1-2** (+0.505 and +0.504 avg value), coinciding exactly with the rookie contract window. But by Year 3, value has already cratered to +0.069 — a **86% decline**.
 
@@ -95,18 +80,7 @@ While first-round busts make headlines, late-round RB gems consistently deliver 
 
 ![Horizontal bar chart showing top 10 running back bargains ranked by career average value score. Jahmyr Gibbs leads at +1.451 (Round 1, Pick 12), followed by James Cook at +1.363 (Round 2, Pick 63), Jordan Howard at +1.159 (Round 5, Pick 150), Marlon Mack at +1.147 (Round 5, Pick 143), Kyren Williams at +1.138 (Round 6, Pick 164), and five others. Bars colored by draft round using green gradient.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/rb_economics/top_bargains.png)
 
-| Player | Draft Round | Pick # | Avg Value Score | Seasons |
-|--------|-------------|--------|-----------------|---------|
-| **Jahmyr Gibbs** | 1 | 12 | **+1.451** | 2 |
-| **James Cook** | 2 | 63 | **+1.363** | 3 |
-| **Jordan Howard** | 5 | 150 | **+1.159** | 5 |
-| **Marlon Mack** | 5 | 143 | **+1.147** | 3 |
-| **Kyren Williams** | 6 | 164 | **+1.138** | 3 |
-| Dameon Pierce | 4 | 107 | +1.087 | 2 |
-| Kenneth Walker III | 2 | 41 | +1.073 | 3 |
-| Rachaad White | 3 | 91 | +1.069 | 3 |
-| Tony Pollard | 4 | 128 | +1.039 | 3 |
-| Aaron Jones | 5 | 182 | +1.033 | 4 |
+![Table visualization showing top 10 RB bargains ranked by career average value score, with columns for Player, Draft Round, Pick #, Avg Value Score, and Seasons. Jahmyr Gibbs leads at +1.451 (Round 1, Pick 12), followed by James Cook at +1.363 (Round 2, Pick 63), Jordan Howard at +1.159 (Round 5, Pick 150), and seven others, demonstrating that elite RB value can be found across all draft rounds.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/rb_economics/table_3_top_bargains.png)
 
 **Notice the pattern?** Only 2 of the top 10 came from Round 1-2. The remaining 8 were drafted in **Rounds 3-6**, yet they delivered elite production at bargain contracts.
 
@@ -124,13 +98,7 @@ Some of the NFL's most celebrated running backs — Christian McCaffrey, Ezekiel
 
 ![Horizontal bar chart showing top 10 first-round running back busts ranked by career average value score (lowest to highest). Marshawn Lynch at -2.057 (Pick 12), Jonathan Stewart at -2.052 (Pick 13), Christian McCaffrey at -2.051 (Pick 8), Ezekiel Elliott at -1.755 (Pick 4), Doug Martin at -0.968 (Pick 31), and five others. Bars colored by draft pick number using red gradient.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/rb_economics/top_busts.png)
 
-| Player | Pick # | Avg Value Score | Seasons | Career Accolades |
-|--------|--------|-----------------|---------|------------------|
-| **Marshawn Lynch** | 12 | **-2.057** | 3 | 5x Pro Bowl, Super Bowl Champion |
-| **Jonathan Stewart** | 13 | **-2.052** | 3 | Super Bowl Finalist |
-| **Christian McCaffrey** | 8 | **-2.051** | 8 | 4x Pro Bowl, All-Pro |
-| **Ezekiel Elliott** | 4 | **-1.755** | 9 | 3x Pro Bowl, 2x Rushing Leader |
-| **Doug Martin** | 31 | **-0.968** | 4 | 2x Pro Bowl |
+![Table visualization showing top 5 first-round RB busts ranked by career average value score, with columns for Player, Pick #, Avg Value Score, Seasons, and Career Accolades. Marshawn Lynch at -2.057 (Pick 12), Jonathan Stewart at -2.052 (Pick 13), Christian McCaffrey at -2.051 (Pick 8), Ezekiel Elliott at -1.755 (Pick 4), and Doug Martin at -0.968 (Pick 31), all showing negative value scores despite impressive on-field production and accolades.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/rb_economics/table_4_top_busts.png)
 
 **Wait, Christian McCaffrey is a "bust"?!**
 
@@ -150,10 +118,7 @@ The final nail in the coffin: **Undrafted free agent (UDFA) running backs provid
 
 ![Bar chart comparing average value score between drafted RBs (blue bar at -0.016) and UDFA RBs (orange bar at +0.065). Dashed gray line at 0 separates positive from negative value. Sample sizes shown: Drafted n=874, UDFA n=375.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/rb_economics/replaceability.png)
 
-| Status | Avg Value Score | Sample Size |
-|--------|-----------------|-------------|
-| **UDFA** | **+0.065** | 375 |
-| **Drafted** | **-0.016** | 874 |
+![Table visualization showing positional replaceability comparison between drafted and UDFA running backs, with columns for Status, Avg Value Score, and Sample Size. UDFA RBs show +0.065 average value (n=375) while Drafted RBs show -0.016 average value (n=874), demonstrating that undrafted free agents provide better value than drafted running backs.](https://raw.githubusercontent.com/ghighcove/nfl-salary-analysis/master/article/images/rb_economics/table_5_replaceability.png)
 
 **Undrafted RBs average +0.065 value**, while drafted RBs average **-0.016** — a swing of +0.081 in favor of UDFAs.
 
