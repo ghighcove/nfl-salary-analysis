@@ -3,7 +3,8 @@
 **Article:** rb_economics_medium_draft.md
 **GEO Score:** 95/100 (A+) — after HIGH + MEDIUM optimizations
 **Created:** 2026-02-11
-**Status:** Ready for Medium import (deferred per user request)
+**Updated:** 2026-02-13 (tables converted to PNG images for Medium compatibility)
+**Status:** Ready for re-import with table fix
 
 ---
 
@@ -48,8 +49,11 @@ New analysis: First-round RBs deliver near-zero value (+0.015 avg) vs rounds 2-3
 **Import URL for Medium (New Story → Import a story):**
 
 ```
-https://ghighcove.github.io/nfl-salary-analysis/article/rb_economics_20260211_1825.html
+https://ghighcove.github.io/nfl-salary-analysis/article/rb_economics_20260213_1240.html
 ```
+
+**Previous version (with HTML tables - deprecated):**
+~~https://ghighcove.github.io/nfl-salary-analysis/article/rb_economics_20260211_1825.html~~
 
 **Markdown URL (browser-friendly):**
 
@@ -64,24 +68,24 @@ https://github.com/ghighcove/nfl-salary-analysis/blob/master/article/rb_economic
 When ready to publish (in 3-5 days):
 
 ### Pre-Import
-- [ ] Wait 3-5 days per user request (current date: 2026-02-11)
-- [ ] Verify GitHub Pages URL loads correctly
-- [ ] Confirm all 6 images display in HTML export
+- [x] Wait 3-5 days per user request (completed: 2026-02-13)
+- [x] Verify GitHub Pages URL loads correctly
+- [x] Confirm all 6 images display in HTML export
 
 ### Import to Medium
-1. Go to Medium → New Story → **Import a story**
-2. Paste GitHub Pages URL (above)
-3. Wait for import to complete
+1. ✅ Go to Medium → New Story → **Import a story**
+2. ✅ Paste GitHub Pages URL (above)
+3. ✅ Wait for import to complete
 
 ### Post-Import Review
-- [ ] Check table formatting (data should be preserved, columns may need adjustment)
-- [ ] Verify all 6 images loaded correctly
+- [ ] Check table formatting (5 tables now PNG images for proper Medium display)
+- [ ] Verify all 11 images loaded correctly (6 charts + 5 table PNGs)
 - [ ] Confirm attribution text appears between subtitle and `---`
 
 ### Settings & Metadata
-- [ ] Add 5 tags (see above)
-- [ ] Add SEO description in Medium settings (⋯ menu → Story settings → Advanced → SEO description)
-- [ ] Set publication date/schedule if desired
+- [x] Add 5 tags (NFL, NFL Draft, Running Backs, Sports Analytics, Data Analysis)
+- [x] Add SEO description in Medium settings (completed: 2026-02-13)
+- [ ] Set publication date/schedule (user will complete: 2/24/2026)
 - [ ] Choose distribution (publish to homepage, followers, etc.)
 
 ### Final Review
@@ -112,7 +116,13 @@ When ready to publish (in 3-5 days):
 
 ## Notes
 
-- **Unique filename:** `rb_economics_20260211_1825.html` (timestamped to bypass Medium's aggressive URL caching)
+- **Unique filename:** `rb_economics_20260213_1240.html` (timestamped to bypass Medium's aggressive URL caching)
 - **Image URLs:** All images use `raw.githubusercontent.com` URLs (work correctly in Medium imports)
-- **Table handling:** Medium may reflow wide tables — review formatting post-import
+- **Table handling:** ✅ **FIXED** - All 5 data tables converted to PNG images (Medium doesn't render HTML `<table>` tags well)
+  - Table 1: Draft Round Value Comparison
+  - Table 2: RB Career Arc by Year
+  - Table 3: Top 10 RB Bargains
+  - Table 4: Top 10 First-Round RB Busts
+  - Table 5: Positional Replaceability (Drafted vs. UDFA)
 - **Attribution:** Attribution text appears between subtitle and first `---` per project standards
+- **Total images:** 11 (6 charts + 5 table PNGs)
