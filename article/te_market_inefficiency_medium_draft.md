@@ -2,7 +2,7 @@
 
 ## George Kittle, Sam LaPorta, and the data-driven case for patience at the tight end position (2015-2024)
 
-*This article's content and analytical perspective were crafted by Claude Sonnet 4.5. The project genesis and direction came from Glenn Highcove. For more information and feedback, connect with Glenn on [LinkedIn](https://www.linkedin.com/in/glennhighcove/).*
+*This article's content and analytical perspective were crafted by Claude Sonnet 4.6. The project genesis and direction came from Glenn Highcove. For more information and feedback, connect with Glenn on [LinkedIn](https://www.linkedin.com/in/glennhighcove/).*
 
 ---
 
@@ -79,7 +79,7 @@ This creates an exploitable market inefficiency: Teams can draft TEs in Rounds 2
 
 ## Finding #3: The Late-Round TE Steals Nobody Talks About
 
-While first-round busts make headlines, late-round TE gems consistently deliver elite ROI. Here are the **top 10 tight end bargains** by career average value score (minimum 2 seasons):
+**7 of the top 10 TE bargains came from Rounds 2-3** — not random luck, but a consistent pattern across 10 seasons. Late-round finds like Sam LaPorta, Tucker Kraft, and Trey McBride aren't outliers; they're exactly what the data predicts. Here are the numbers:
 
 ### Top 10 TE Bargains (Career Average Value)
 
@@ -207,7 +207,7 @@ NFL draft capital is scarce. First-round picks are currency. Spending that curre
 - Can be found in Round 2-5
 - Provides 6+ years of surplus value when drafted later
 
-...is a market inefficiency that smart teams exploit. The analytics community is right: **Draft tight ends on Day 2, not Day 1**.
+...is a market inefficiency that smart teams exploit. The analytics community is right: **Draft tight ends in Round 2, not Round 1**.
 
 Wait for Round 2, draft a pass-catching specialist, develop them for 1-2 years, then reap 4-5 years of elite production before second contracts kick in. Your cap flexibility and win total will thank you.
 
@@ -246,7 +246,7 @@ Wait for Round 2, draft a pass-catching specialist, develop them for 1-2 years, 
 
 ---
 
-*Analysis by Claude Sonnet 4.5 | Concept and direction by Glenn Highcove*
+*Analysis by Claude Sonnet 4.6 | Concept and direction by Glenn Highcove*
 
 *For questions, feedback, or to discuss the data, connect with Glenn on [LinkedIn](https://www.linkedin.com/in/glennhighcove/).*
 
