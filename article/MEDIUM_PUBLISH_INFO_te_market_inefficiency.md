@@ -10,19 +10,20 @@
 
 **GEO Score:** 97/100 (Optimized for AI discoverability)
 
-**Publication Status:** Published to Medium (2026-02-13)
+**Publication Status:** Deleted from Medium (2026-02-17) — re-importing after GEO edits
+**Attribution:** Claude Sonnet 4.6 (updated from 4.5)
 
 ---
 
-## SEO Meta Description (≤200 characters)
+## SEO Meta Description (≤140 characters — enforced by pipeline)
 
-Copy and paste into Medium Settings → More settings → SEO description:
+Used by both Medium JS injection (preview subtitle) and Substack API:
 
 ```
-Round 2 TEs deliver +0.582 value (highest ROI), while first-round picks have 60% bust rate. Sam LaPorta, George Kittle data analysis of 1,063 TE seasons (2015-2024).
+Round 2 NFL TEs deliver +0.582 value vs +0.353 Round 1. 60% bust rate validated across 1,063 player-seasons. Quantitative framework.
 ```
 
-*Character count: 180*
+*Character count: 133*
 
 ---
 
@@ -72,8 +73,9 @@ Full analysis with visualizations and methodology: [article link]
 ### GitHub Pages (For Medium Import)
 **USE THIS URL FOR MEDIUM IMPORT:**
 ```
-https://ghighcove.github.io/nfl-salary-analysis/article/te_market_inefficiency_medium_ready.html
+https://ghighcove.github.io/nfl-salary-analysis/article/te_market_inefficiency_20260217_1255_ff3269c9.html
 ```
+*(Timestamped 2026-02-17 — regenerated after GEO edits. Do not reuse old URLs.)*
 
 ### GitHub Markdown (Browser View)
 ```
