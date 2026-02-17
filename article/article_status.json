@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "project": "nfl",
+  "project_display_name": "NFL Analytics",
+  "category": "Sports Analytics",
+  "generated_at": "2026-02-17T13:12:25",
+  "articles": [
+    {
+      "id": "20260211_nfl_draft_roi",
+      "slug": "nfl_draft_roi",
+      "draft_file": "article/drafts/20260211_nfl_draft_roi.md",
+      "preview_html": "article/medium_ready.html",
+      "title": "NFL Draft ROI: The Data Reveals Which Rounds Produce the Best Value",
+      "subtitle": "Analyzing 10 years of rookie contracts to find the draft's hidden sweet spots",
+      "category": "Sports Analytics",
+      "tags": [
+        "NFL",
+        "NFL Draft",
+        "Data Analysis",
+        "Sports Analytics",
+        "Football"
+      ],
+      "date": "2026-02-11",
+      "status": "ready",
+      "draft": false,
+      "platforms_published": [],
+      "platform_urls": {},
+      "publish_dates": {},
+      "word_count": 2523,
+      "images_ready": false,
+      "notes": ""
+    },
+    {
+      "id": "20260211_nfl_salary_analysis",
+      "slug": "nfl_salary_analysis",
+      "draft_file": "article/drafts/20260211_nfl_salary_analysis.md",
+      "preview_html": "article/medium_ready.html",
+      "title": "The NFL's Hidden Math: Which Players Are Worth Their Salary?",
+      "subtitle": "9,041 player-seasons. One question: Who's a bargain, and who's a bust?",
+      "category": "Sports Analytics",
+      "tags": [
+        "NFL",
+        "Data Analysis",
+        "Sports Analytics",
+        "Salary Cap",
+        "Football"
+      ],
+      "date": "2026-02-11",
+      "status": "ready",
+      "draft": false,
+      "platforms_published": [],
+      "platform_urls": {},
+      "publish_dates": {},
+      "word_count": 2347,
+      "images_ready": false,
+      "notes": ""
+    },
+    {
+      "id": "20260211_qb_deep_dive",
+      "slug": "qb_deep_dive",
+      "draft_file": "article/drafts/20260211_qb_deep_dive.md",
+      "preview_html": "article/medium_ready.html",
+      "title": "Quarterback Value Deep Dive",
+      "subtitle": "Round 5 QBs deliver +0.623 avg value — the contract trap that destroys franchise QBs",
+      "category": "Sports Analytics",
+      "tags": [
+        "NFL",
+        "Quarterbacks",
+        "NFL Draft",
+        "Sports Analytics",
+        "Salary Cap"
+      ],
+      "date": "2026-02-11",
+      "status": "ready",
+      "draft": false,
+      "platforms_published": [],
+      "platform_urls": {},
+      "publish_dates": {},
+      "word_count": 3649,
+      "images_ready": false,
+      "notes": ""
+    },
+    {
+      "id": "20260211_rb_economics",
+      "slug": "rb_economics",
+      "draft_file": "article/drafts/20260211_rb_economics.md",
+      "preview_html": "article/medium_ready.html",
+      "title": "Running Back Economics: Why First-Round RBs Are Killing Your Salary Cap",
+      "subtitle": "First-round RBs provide near-zero value — 35x worse ROI than rounds 2-3",
+      "category": "Sports Analytics",
+      "tags": [
+        "NFL",
+        "NFL Draft",
+        "Running Backs",
+        "Sports Analytics",
+        "Data Analysis"
+      ],
+      "date": "2026-02-11",
+      "status": "ready",
+      "draft": false,
+      "platforms_published": [],
+      "platform_urls": {},
+      "publish_dates": {},
+      "word_count": 3093,
+      "images_ready": false,
+      "notes": ""
+    },
+    {
+      "id": "20260213_te_market_inefficiency",
+      "slug": "te_market_inefficiency",
+      "draft_file": "article/te_market_inefficiency_medium_draft.md",
+      "preview_html": "article/te_market_inefficiency_20260217_1255_ff3269c9.html",
+      "title": "Tight End Market Inefficiency: Why Round 2 TEs Are the NFL Draft's Best-Kept Secret",
+      "subtitle": "George Kittle, Sam LaPorta, and the data-driven case for patience at the tight end position (2015-2024)",
+      "category": "Sports Analytics",
+      "tags": [
+        "NFL Draft",
+        "NFL",
+        "Data Analysis",
+        "Sports Analytics",
+        "Football"
+      ],
+      "date": "2026-02-13",
+      "status": "medium_draft",
+      "draft": true,
+      "platforms_published": [],
+      "platform_urls": {
+        "medium_draft": "https://medium.com/p/5e631a644b94/edit"
+      },
+      "publish_dates": {},
+      "word_count": 3347,
+      "images_ready": true,
+      "notes": "2026-02-17: GEO edits applied (attribution 4.5->4.6, Finding #3 BLUF, entity consistency). Imported to Medium as draft 5e631a644b94. SEO injection pending (browser extension unstable on Medium editor). SEO values: title=same, desc=133 chars, topics=NFL Draft/NFL/Data Analysis/Sports Analytics/Football."
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "published": 0,
+    "ready": 5,
+    "draft": 0,
+    "archived": 0
+  }
+}
