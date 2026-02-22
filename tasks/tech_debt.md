@@ -29,7 +29,7 @@
 |----|------|------|-----|--------|--------|-------|
 | TD-10 | Audit CLAUDE.md for bloat (target <60 lines) | LOW | 10 min | auto_sprint | open | Run /claude-md-audit if >60 lines |
 | TD-11 | Review tasks/lessons.md for promotable patterns (2+ occurrences) | LOW | 15 min | auto_sprint | open | Promote critical patterns to CLAUDE.md |
-| TD-12 | Run git log --oneline -10 and verify commit hygiene | LOW | 5 min | auto_sprint | open | Flag any uncommitted work >3 days old |
+| TD-12 | Run git log --oneline -10 and verify commit hygiene | LOW | 5 min | auto_sprint | done | Last commit Feb 22 (clean). CLAUDED.md has large uncommitted rewrite (148→9 lines) — likely incomplete audit, flagged for user review |
 
 ---
 
