@@ -18,8 +18,8 @@
 
 | ID | Item | Risk | Est | Bucket | Status | Notes |
 |----|------|------|-----|--------|--------|-------|
-| TD-01 | Review tasks/context.md for stale state | LOW | 5 min | auto_sprint | open | Last context save may be stale |
-| TD-02 | Review tasks/todo.md and migrate open items to this file | LOW | 10 min | auto_sprint | open | Consolidate todo.md into tech_debt queue format |
+| TD-01 | Review tasks/context.md for stale state | LOW | 5 min | auto_sprint | done | Stale (Feb 13, 10 days). Key outdated: trading_bot now has GitHub remote; TE article (Feb 20) likely published. Full rewrite needs user — add to TDU queue. |
+| TD-02 | Review tasks/todo.md and migrate open items to this file | LOW | 10 min | auto_sprint | done | Migrated: 2 Medium publish items → TDU-02/03; 4 future enhancements → TDU-04. See below. |
 
 ---
 
@@ -27,7 +27,7 @@
 
 | ID | Item | Risk | Est | Bucket | Status | Notes |
 |----|------|------|-----|--------|--------|-------|
-| TD-10 | Audit CLAUDE.md for bloat (target <60 lines) | LOW | 10 min | auto_sprint | open | Run /claude-md-audit if >60 lines |
+| TD-10 | Audit CLAUDE.md for bloat (target <60 lines) | LOW | 10 min | auto_sprint | done | 148 lines — CRITICAL bloat. Already flagged in TD-13 (manual/MEDIUM: create .claude/rules/, migrate publishing + platform sections). No autonomous action — needs user. |
 | TD-11 | Review tasks/lessons.md for promotable patterns (2+ occurrences) | LOW | 15 min | auto_sprint | open | Promote critical patterns to CLAUDE.md |
 | TD-12 | Run git log --oneline -10 and verify commit hygiene | LOW | 5 min | auto_sprint | done | Last commit Feb 22 (clean). Incomplete CLAUDE.md audit discarded — .claude/rules/ never created. See TD-13. |
 | TD-13 | Proper CLAUDE.md audit: create .claude/rules/ and migrate content | MEDIUM | 30 min | manual | open | Committed file is 148 lines (bloated). Need to create .claude/rules/ dirs and move publishing/platform rules there. created: 2026-02-22 |
@@ -39,6 +39,9 @@
 | ID | Item | Risk | Est | Bucket | Status | Notes |
 |----|------|------|-----|--------|--------|-------|
 | TDU-01 | Define offseason data plan | — | 30 min | manual | blocked | NFL season ended; determine what weekly processes to disable/pause |
+| TDU-02 | Publish RB Economics to Medium | — | 10 min | manual | open | Ready. URL: ghighcove.github.io/nfl-salary-analysis/article/rb_economics_20260211_1825.html. Steps in todo.md. GEO 95/100 |
+| TDU-03 | Publish QB Deep Dive to Medium | — | 10 min | manual | open | Ready. URL: ghighcove.github.io/nfl-salary-analysis/article/qb_deep_dive_20260211_1840.html. GEO 97/100. Publish after RB. |
+| TDU-04 | Future enhancements — review and prioritize | — | 20 min | manual | open | From todo.md: play-by-play punter data, OL metrics (PFF?), de-dupe trade players, interactive dropdown widget |
 
 ---
 
