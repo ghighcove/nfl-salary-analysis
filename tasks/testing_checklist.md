@@ -3,13 +3,13 @@
 ## Project 1: Medium Scheduling Automator + Article Tracker
 
 ### Medium Tracker CLI
-- [ ] Run `python G:/ai/medium-publishing-standards/tools/medium_tracker.py --list`
+- [ ] Run `python medium-publishing-standards/tools/medium_tracker.py --list`
   - Verify shows pending articles from NFL project
   - Check counts match reality (4 pending articles expected)
 - [ ] Test filtering: `python medium_tracker.py --list --status pending`
 - [ ] Test project filter: `python medium_tracker.py --list --project nfl`
 - [ ] Generate HTML: `python medium_tracker.py --html`
-  - Open `G:/ai/medium-publishing-standards/published/index.html`
+  - Open `medium-publishing-standards/published/index.html`
   - Test sorting (click column headers)
   - Test filtering (All/Published/Pending buttons)
   - Test search (type "rb" or "nfl")
@@ -31,11 +31,11 @@
 ## Project 2: Multi-Strategy Backtesting System
 
 ### Prerequisites
-- [ ] Verify market data exists: `G:/ai/trading_bot/data/SPY_historical.csv`
+- [ ] Verify market data exists: `trading_bot/data/SPY_historical.csv`
   - If missing, download SPY historical data (CSV format with columns: timestamp, open, high, low, close, volume)
 
 ### Batch Backtest
-- [ ] Run: `cd G:/ai/trading_bot && python scripts/run_batch_backtest.py --config config/batch_backtest.yaml`
+- [ ] Run: `cd trading_bot && python scripts/run_batch_backtest.py --config config/batch_backtest.yaml`
 - [ ] Verify:
   - All 5 strategies execute successfully
   - Parallel execution completes (check duration vs sequential)
@@ -111,10 +111,10 @@
 
 ```bash
 # Test Medium tracker
-python G:/ai/medium-publishing-standards/tools/medium_tracker.py --list
+python medium-publishing-standards/tools/medium_tracker.py --list
 
 # Test batch backtest (if data available)
-cd G:/ai/trading_bot
+cd trading_bot
 python scripts/run_batch_backtest.py --config config/batch_backtest.yaml --no-parallel
 
 # Test optimization (if data available)

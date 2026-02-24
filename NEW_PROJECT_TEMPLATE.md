@@ -28,7 +28,6 @@ See the full plan document for detailed descriptions of each research direction:
 ### 1. Create Repository
 
 ```bash
-cd G:/ai
 gh repo create nfl-<project-name> --private --description "<brief description>"
 git clone https://github.com/ghighcove/nfl-<project-name>.git
 cd nfl-<project-name>
@@ -315,14 +314,14 @@ git push -u origin master
 If you need to modify the shared library (`nfl-data-core`):
 
 ```bash
-cd G:/ai/nfl-data-core
+cd nfl-data-core
 # Make your changes
 git add .
 git commit -m "Add new function: [description]"
 git push
 
 # Then update in your project
-cd G:/ai/nfl-[your-project]
+cd nfl-[your-project]
 pip install --upgrade git+https://github.com/ghighcove/nfl-data-core.git
 ```
 

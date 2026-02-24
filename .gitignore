@@ -8,3 +8,6 @@ __pycache__/
 dist/
 build/
 tasks/context.md
+
+# Generated output files with machine paths
+outputs/
