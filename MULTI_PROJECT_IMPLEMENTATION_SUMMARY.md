@@ -171,7 +171,6 @@ See `NEW_PROJECT_TEMPLATE.md` for full details. Quick version:
 
 ```bash
 # 1. Create repo
-cd G:/ai
 gh repo create nfl-[project-name] --private
 git clone https://github.com/ghighcove/nfl-[project-name].git
 cd nfl-[project-name]
@@ -200,7 +199,7 @@ git push
 
 ### Library Installation Test
 ```bash
-$ cd G:/ai/nfl
+$ cd nfl-salary-analysis
 $ python -c "from nfl_analysis import data_loader, cleaning, value_score, viz; print('SUCCESS')"
 SUCCESS: All modules imported from nfl_analysis
   data_loader: 15 public items
@@ -211,7 +210,7 @@ SUCCESS: All modules imported from nfl_analysis
 
 ### Git Status
 ```bash
-$ cd G:/ai/nfl
+$ cd nfl-salary-analysis
 $ git log --oneline -3
 332082b Add template documentation for creating new research projects
 bdd788d Migrate to nfl-data-core shared library
@@ -263,7 +262,7 @@ Alternatives:
 
 Once you choose, follow `NEW_PROJECT_TEMPLATE.md` to:
 1. Create new GitHub repo: `nfl-[project-name]`
-2. Clone locally to `G:/ai/`
+2. Clone locally to your projects directory
 3. Set up structure and dependencies
 4. Create analysis notebooks
 5. Document findings in README
@@ -345,7 +344,7 @@ If new project needs additional functions:
 ### Updating the Shared Library
 
 ```bash
-cd G:/ai/nfl-data-core
+cd nfl-data-core
 # Make changes to modules
 git add .
 git commit -m "Add new feature: [description]"
