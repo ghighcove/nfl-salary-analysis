@@ -28,8 +28,8 @@ from geo_metadata import generate_publish_info
 def get_project_root():
     """Get the project root directory (where article/ folder lives)."""
     # From .claude/skills/nfl-article-publish/ to project root
-    # Path is: G:\ai\nfl\.claude\skills\nfl-article-publish\main.py
-    # Need to go up 3 levels to get to G:\ai\nfl
+    # Path is: <project>/.claude/skills/nfl-article-publish/main.py
+    # Need to go up 3 levels to get to project root
     skill_dir = Path(__file__).parent.resolve()
     return str(skill_dir.parent.parent.parent)
 
@@ -303,7 +303,7 @@ def main(article_name):
     print("  • Update cross-project dashboard (INDEX.md + index.html)")
     print("  • Track article metadata for portfolio visibility")
     print("\nTo archive later, run:")
-    print(f"  python G:/ai/medium-publishing-standards/tools/archive_article.py \\")
+    print(f"  python medium-publishing-standards/tools/archive_article.py \\")
     print(f"    --source=\"{os.path.join(article_dir, f'{article_name}_medium_draft.md')}\" \\")
     print(f"    --medium-url=\"<MEDIUM_URL>\" \\")
     print(f"    --project=\"nfl\" \\")
@@ -318,7 +318,7 @@ def main(article_name):
     print("2. Import to Medium using the GitHub Pages URL (not raw.githubusercontent.com)")
     print("3. Schedule publication date in Medium (if desired)")
     print("4. After publishing, archive the article using the command above")
-    print("5. View dashboard: G:/ai/medium-publishing-standards/published/index.html\n")
+    print("5. View dashboard: medium-publishing-standards/published/index.html\n")
 
     return 0
 
