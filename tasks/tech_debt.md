@@ -28,7 +28,7 @@
 | ID | Item | Risk | Est | Bucket | Status | Notes |
 |----|------|------|-----|--------|--------|-------|
 | TD-10 | Audit CLAUDE.md for bloat (target <60 lines) | LOW | 10 min | auto_sprint | done | 148 lines — CRITICAL bloat. Already flagged in TD-13 (manual/MEDIUM: create .claude/rules/, migrate publishing + platform sections). No autonomous action — needs user. |
-| TD-11 | Review tasks/lessons.md for promotable patterns (2+ occurrences) | LOW | 15 min | auto_sprint | open | Promote critical patterns to CLAUDE.md |
+| TD-11 | Review tasks/lessons.md for promotable patterns (2+ occurrences) | LOW | 15 min | auto_sprint | done | Reviewed 2026-02-25. 4 lessons sections: Medium import nav, Medium caching (already in CLAUDE.md), form_input fallback, and data join patterns. Caching pattern already promoted. Others are single occurrences — below 2+ threshold. No new promotions needed. |
 | TD-12 | Run git log --oneline -10 and verify commit hygiene | LOW | 5 min | auto_sprint | done | Last commit Feb 22 (clean). Incomplete CLAUDE.md audit discarded — .claude/rules/ never created. See TD-13. |
 | TD-13 | Proper CLAUDE.md audit: create .claude/rules/ and migrate content | MEDIUM | 30 min | manual | open | Committed file is 148 lines (bloated). Need to create .claude/rules/ dirs and move publishing/platform rules there. created: 2026-02-22 |
 
