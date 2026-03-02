@@ -30,7 +30,7 @@
 | TD-10 | Audit CLAUDE.md for bloat (target <60 lines) | LOW | 10 min | auto_sprint | done | 148 lines — CRITICAL bloat. Already flagged in TD-13 (manual/MEDIUM: create .claude/rules/, migrate publishing + platform sections). No autonomous action — needs user. |
 | TD-11 | Review tasks/lessons.md for promotable patterns (2+ occurrences) | LOW | 15 min | auto_sprint | done | Reviewed 2026-02-25. 4 lessons sections: Medium import nav, Medium caching (already in CLAUDE.md), form_input fallback, and data join patterns. Caching pattern already promoted. Others are single occurrences — below 2+ threshold. No new promotions needed. |
 | TD-12 | Run git log --oneline -10 and verify commit hygiene | LOW | 5 min | auto_sprint | done | Last commit Feb 22 (clean). Incomplete CLAUDE.md audit discarded — .claude/rules/ never created. See TD-13. |
-| TD-13 | Proper CLAUDE.md audit: create .claude/rules/ and migrate content | MEDIUM | 30 min | manual | open | Committed file is 148 lines (bloated). Need to create .claude/rules/ dirs and move publishing/platform rules there. created: 2026-02-22 |
+| TD-13 | Proper CLAUDE.md audit: create .claude/rules/ and migrate content | MEDIUM | 30 min | manual | done | **DONE 2026-03-02.** CLAUDE.md 149→27 lines. Publishing workflow moved to .claude/rules/publishing.md. |
 
 ---
 
@@ -39,7 +39,7 @@
 | ID | Item | Risk | Est | Bucket | Status | Notes |
 |----|------|------|-----|--------|--------|-------|
 | TDU-01 | Define offseason data plan | — | 30 min | manual | blocked | NFL season ended; determine what weekly processes to disable/pause |
-| TDU-02 | Publish RB Economics to Medium | — | 10 min | manual | open | Ready. URL: ghighcove.github.io/nfl-salary-analysis/article/rb_economics_20260211_1825.html. Steps in todo.md. GEO 95/100 |
+| TDU-02 | Publish RB Economics to Medium | — | 10 min | manual | done | Published Feb 27. |
 | TDU-03 | Publish QB Deep Dive to Medium | — | 10 min | manual | open | Ready. URL: ghighcove.github.io/nfl-salary-analysis/article/qb_deep_dive_20260211_1840.html. GEO 97/100. Publish after RB. |
 | TDU-04 | Future enhancements — review and prioritize | — | 20 min | manual | open | From todo.md: play-by-play punter data, OL metrics (PFF?), de-dupe trade players, interactive dropdown widget |
 
