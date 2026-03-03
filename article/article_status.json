@@ -61,7 +61,7 @@
       "draft_file": "article/drafts/20260211_qb_deep_dive.md",
       "preview_html": "article/medium_ready.html",
       "title": "Quarterback Value Deep Dive",
-      "subtitle": "Round 5 QBs deliver +0.623 avg value — the contract trap that destroys franchise QBs",
+      "subtitle": "Round 5 QBs deliver +0.623 avg value \u2014 the contract trap that destroys franchise QBs",
       "category": "Sports Analytics",
       "tags": [
         "NFL",
@@ -86,7 +86,7 @@
       "draft_file": "article/drafts/20260211_rb_economics.md",
       "preview_html": "article/medium_ready.html",
       "title": "Running Back Economics: Why First-Round RBs Are Killing Your Salary Cap",
-      "subtitle": "First-round RBs provide near-zero value — 35x worse ROI than rounds 2-3",
+      "subtitle": "First-round RBs provide near-zero value \u2014 35x worse ROI than rounds 2-3",
       "category": "Sports Analytics",
       "tags": [
         "NFL",
@@ -96,14 +96,20 @@
         "Data Analysis"
       ],
       "date": "2026-02-11",
-      "status": "ready",
+      "status": "published",
       "draft": false,
-      "platforms_published": [],
-      "platform_urls": {},
-      "publish_dates": {},
+      "platforms_published": [
+        "medium"
+      ],
+      "platform_urls": {
+        "medium": "https://medium.com/p/7296de14defa"
+      },
+      "publish_dates": {
+        "medium": "2026-02-27"
+      },
       "word_count": 3093,
       "images_ready": false,
-      "notes": ""
+      "notes": "2026-02-27: Published to Medium. Tags: NFL, NFL Draft, Nfl Running Backs, Sports Analytics, Data Analysis."
     },
     {
       "id": "20260213_te_market_inefficiency",
@@ -135,8 +141,8 @@
   ],
   "summary": {
     "total": 5,
-    "published": 0,
-    "ready": 5,
+    "published": 1,
+    "ready": 3,
     "draft": 0,
     "archived": 0
   }

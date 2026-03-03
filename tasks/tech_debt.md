@@ -38,10 +38,10 @@
 
 | ID | Item | Risk | Est | Bucket | Status | Notes |
 |----|------|------|-----|--------|--------|-------|
-| TDU-01 | Define offseason data plan | — | 30 min | manual | blocked | NFL season ended; determine what weekly processes to disable/pause |
+| TDU-01 | Define offseason data plan | — | 30 min | manual | done | **DONE 2026-03-02.** Decision: nothing runs until mid-July. Disabled: picks-daily-note, picks-evening-resolve, picks-weekly-article-writer (all Task Scheduler → Disabled). Re-enable mid-July when preseason data becomes relevant. |
 | TDU-02 | Publish RB Economics to Medium | — | 10 min | manual | done | Published Feb 27. |
-| TDU-03 | Publish QB Deep Dive to Medium | — | 10 min | manual | open | Ready. URL: ghighcove.github.io/nfl-salary-analysis/article/qb_deep_dive_20260211_1840.html. GEO 97/100. Publish after RB. |
-| TDU-04 | Future enhancements — review and prioritize | — | 20 min | manual | open | From todo.md: play-by-play punter data, OL metrics (PFF?), de-dupe trade players, interactive dropdown widget |
+| TDU-03 | Publish QB Deep Dive to Medium | — | 10 min | manual | open | Ready. URL: ghighcove.github.io/nfl-salary-analysis/article/qb_deep_dive_20260211_1840.html. GEO 97/100. Publish after RB. Defer until 2026-03-09. |
+| TDU-04 | Future enhancements — review and prioritize | — | 20 min | manual | open | From todo.md: play-by-play punter data, OL metrics (PFF?), de-dupe trade players, interactive dropdown widget. Defer until 2026-07-15 (after offseason, when season prep begins). |
 
 ---
 
